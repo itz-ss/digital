@@ -1,7 +1,7 @@
 "use client";
 
 import heroData from "@/data/hero.json";
-import Button from "@/components/ui/Button";
+import Button from "@/components/UI/Button";
 import RevealWrapper from "@/components/UI/RevealWrapper";
 import "./style/hero.css";
 
