@@ -1,0 +1,190 @@
+/* ===============================
+   Who We Work With (Desktop default)
+================================ */
+
+.who-we-work-with {
+  padding: 96px 24px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 0 0 32px 32px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.who-we-work-with-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* ===============================
+   Header
+================================ */
+
+.who-we-work-with-header {
+  max-width: 720px;
+  margin-bottom: 64px;
+}
+
+.section-title {
+  margin: 0 0 12px 0;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  margin: 0 0 16px 0;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.section-description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+}
+
+/* ===============================
+   Grid
+================================ */
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* ===============================
+   Card
+================================ */
+
+.industry-card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.industry-card:hover {
+  background-color: var(--bg-muted);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Icon */
+.industry-icon {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  color: var(--accent-primary);
+}
+
+/* Text */
+.industry-title {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.industry-description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   Tablet ≤1024px
+================================ */
+
+@media (max-width: 1024px) {
+  .who-we-work-with {
+    padding: 88px 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* ===============================
+   Mobile ≤768px
+================================ */
+
+@media (max-width: 768px) {
+  .who-we-work-with {
+    padding: 72px 20px;
+  }
+
+  .who-we-work-with-header {
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ===============================
+   Small Mobile ≤480px (CRITICAL)
+================================ */
+
+@media (max-width: 480px) {
+  .who-we-work-with {
+    padding: 56px 16px;
+  }
+
+  .who-we-work-with-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .industry-card {
+    padding: 22px;
+  }
+
+  .industry-icon {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .industry-title {
+    font-size: 1rem;
+  }
+
+  .industry-description {
+    font-size: 0.85rem;
+  }
+}

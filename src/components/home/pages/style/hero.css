@@ -1,0 +1,132 @@
+/* ================================
+   Hero Section (Dark Premium)
+================================ */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(108, 92, 231, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 118, 117, 0.08),
+      transparent 45%
+    ),
+    var(--bg-primary);
+
+  padding: 120px 24px 140px;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ================================
+   Title
+================================ */
+
+.hero-title {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  color: var(--text-primary);
+}
+
+/* ================================
+   Subtitle
+================================ */
+
+.hero-subtitle {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  color: var(--text-secondary);
+}
+
+/* ================================
+   Actions Layout Only
+================================ */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* ================================
+   Tablet ≤1024px
+================================ */
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 20px 120px;
+  }
+
+  .hero-title {
+    max-width: 760px;
+  }
+
+  .hero-subtitle {
+    max-width: 640px;
+  }
+}
+
+/* ================================
+   Mobile ≤768px
+================================ */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 90px 20px 110px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    gap: 14px;
+  }
+}
+
+/* ================================
+   Small Mobile ≤480px
+================================ */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 16px 100px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+    white-space: normal;
+    text-align: center;
+  }
+}

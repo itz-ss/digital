@@ -1,0 +1,233 @@
+/* ===============================
+   Work Section
+================================ */
+
+.work {
+  padding: 120px 24px;
+  background-color: var(--bg-primary);
+}
+
+.work-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Header
+================================ */
+
+.work-header {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.work-title {
+  margin-bottom: 12px;
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+}
+
+.work-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   Filters
+================================ */
+
+.work-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: transparent;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.filter-btn.active {
+  background-color: var(--blue-primary);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ===============================
+   Groups
+================================ */
+
+.work-group {
+  margin-bottom: 96px;
+}
+
+.work-group-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.work-group-header h3 {
+  font-size: 1.6rem;
+}
+
+.work-group-header p {
+  max-width: 520px;
+  color: var(--text-secondary);
+}
+
+.mute-btn {
+  border: none;
+  background: var(--bg-soft);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ===============================
+   Horizontal Scroll Polish
+================================ */
+
+.work-row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 16px;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  touch-action: pan-x;
+}
+
+.work-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   Cards
+================================ */
+
+.work-card {
+  flex: 0 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #000;
+  cursor: pointer;
+
+  scroll-snap-align: start;
+  touch-action: pan-x;
+
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.work-card iframe,
+.work-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  pointer-events: none; /* prevent scroll hijack */
+}
+
+/* ===============================
+   Ratios
+================================ */
+
+.work-row.reels .work-card {
+  width: calc((100% - 72px) / 4);
+  aspect-ratio: 9 / 16;
+}
+
+.work-row.videos .work-card {
+  width: calc((100% - 48px) / 3);
+  aspect-ratio: 16 / 9;
+}
+
+/* ===============================
+   Modal
+================================ */
+
+.work-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.work-modal-content {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.work-modal iframe,
+.work-modal video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 1024px) {
+  .work-row.reels .work-card {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .work-row.videos .work-card {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .work-row.reels .work-card,
+  .work-row.videos .work-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-row.reels .work-card,
+  .work-row.videos .work-card {
+    width: 88%;
+  }
+}

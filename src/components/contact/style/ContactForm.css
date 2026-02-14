@@ -1,0 +1,154 @@
+/* ===============================
+   Contact Section
+================================ */
+
+.contact {
+  padding: 96px 24px;
+  background: var(--bg-primary);
+}
+
+.contact-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Header
+================================ */
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.contact-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+.contact-header h2 {
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   Form
+================================ */
+
+.contact-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form-field.full {
+  margin-bottom: 32px;
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: var(--text-tertiary);
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px var(--blue-soft);
+}
+
+/* ===============================
+   Button
+================================ */
+
+.contact-submit {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: var(--blue-primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+}
+
+.contact-submit:hover {
+  opacity: 0.92;
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   Status Messages
+================================ */
+
+.form-success {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: green;
+}
+
+.form-error {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--red-primary);
+}
+
+/* ===============================
+   Tablet ≤768px
+================================ */
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 32px;
+  }
+}
+
+/* ===============================
+   Small Mobile ≤480px
+================================ */
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 72px 16px;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+}

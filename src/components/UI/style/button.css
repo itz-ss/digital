@@ -1,0 +1,98 @@
+/* ================================
+   Base Button (Dark Premium)
+================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+  border-radius: var(--radius-lg);
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  user-select: none;
+
+  border: none;
+
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+/* ================================
+   Primary — Strategic Purple
+================================ */
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 24px rgba(108, 92, 231, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: #5A4BD8;
+
+  box-shadow:
+    0 12px 32px rgba(108, 92, 231, 0.45);
+
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 16px rgba(108, 92, 231, 0.35);
+}
+
+/* ================================
+   Energy — Conversion Orange
+================================ */
+
+.btn-secondary {
+  background-color: var(--accent-energy);
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 24px rgba(255, 118, 117, 0.35);
+}
+
+.btn-secondary:hover {
+  background-color: #FF5C5B;
+
+  box-shadow:
+    0 12px 32px rgba(255, 118, 117, 0.45);
+
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 16px rgba(255, 118, 117, 0.35);
+}
+
+/* ================================
+   Ghost / Outline Button
+================================ */
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(241, 255, 250, 0.2);
+  color: var(--text-primary);
+}
+
+.btn-ghost:hover {
+  border-color: var(--highlight-ui);
+  color: var(--highlight-ui);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,73 @@
+{
+  "company": "Digitalgram",
+  "tagline": "Visibility, credibility, and meaningful digital growth.",
+
+  "about": {
+    "intro": "Digitalgram is a digital growth agency helping brands become visible, trusted, and consistently profitable in today’s competitive online space.",
+    "overview": "We work with startups, local businesses, and growing brands to build clear digital strategies that connect content, performance, and long-term growth."
+  },
+
+  "vision": {
+    "title": "Our Vision",
+    "description": "To help brands grow with clarity, trust, and confidence in the digital world."
+  },
+
+  "mission": {
+    "title": "Our Mission",
+    "description": "To simplify digital growth and build systems that deliver real, measurable results."
+  },
+
+  "whatWeDo": [
+    "Create attention through content, social media, influencers, and PR",
+    "Convert attention into leads using websites, funnels, and paid media",
+    "Scale results with SEO, automation, CRM, and data-driven optimization",
+    "Build trust through reputation management and local visibility"
+  ],
+
+  "coreExpertise": [
+    {
+      "title": "Social Media & Content",
+      "description": "Engaging, consistent brand presence designed to connect with the right audience."
+    },
+    {
+      "title": "Websites & Funnels",
+      "description": "Fast, conversion-focused digital experiences that turn visitors into customers."
+    },
+    {
+      "title": "Performance Marketing",
+      "description": "ROI-driven ad campaigns across Meta and Google."
+    },
+    {
+      "title": "Influencer, PR & SEO",
+      "description": "Visibility and authority built through authentic reach and organic growth."
+    },
+    {
+      "title": "Automation & CRM",
+      "description": "Systems that capture, nurture, and retain customers automatically."
+    },
+    {
+      "title": "Strategy & Growth Planning",
+      "description": "Clear positioning and realistic roadmaps backed by data."
+    }
+  ],
+
+  "whyChooseUs": {
+    "title": "Why Choose Digitalgram",
+    "points": [
+      "Clear communication and transparent process",
+      "Focus on business results, not vanity metrics",
+      "Strategies built for long-term growth",
+      "Hands-on partnership, not a task-based agency"
+    ]
+  },
+
+  "whoWeWorkWith": [
+    "Startups building their digital presence",
+    "Local businesses looking to dominate their market",
+    "Brands ready to scale visibility and performance"
+  ],
+
+  "philosophy": {
+    "quote": "Visibility brings attention. Strategy turns attention into growth."
+  }
+}

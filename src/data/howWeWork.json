@@ -1,0 +1,35 @@
+{
+  "title": "How We Work",
+  "subheading": "A simple, clear process designed to help your business grow",
+  "description": "We keep things straightforward and transparent. Our process is built to understand your needs, create the right strategy, and continuously improve results — without unnecessary complexity.",
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Understand Your Business",
+      "description": "We begin by learning about your business, your goals, and your audience. This helps us align our efforts with what truly matters to you.",
+      "image": "/assets/HowWeWork/",
+      "alignment": "right"
+    },
+    {
+      "id": "step-2",
+      "title": "Plan the Right Approach",
+      "description": "Based on our understanding, we create a clear and practical plan. Every decision is made to support growth, visibility, and meaningful engagement.",
+      "image": "/assets/HowWeWork/",
+      "alignment": "left"
+    },
+    {
+      "id": "step-3",
+      "title": "Build & Launch",
+      "description": "We create content and launch campaigns thoughtfully across the right platforms. Our focus is on consistency, quality, and real-world impact.",
+      "image": "/assets/HowWeWork/",
+      "alignment": "right"
+    },
+    {
+      "id": "step-4",
+      "title": "Review & Improve",
+      "description": "We monitor performance, learn what works best, and make improvements over time. This ensures steady progress and long-term results.",
+      "image": "/assets/HowWeWork/",
+      "alignment": "left"
+    }
+  ]
+}

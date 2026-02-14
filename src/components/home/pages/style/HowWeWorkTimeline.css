@@ -1,0 +1,202 @@
+/* ===============================
+   How We Work Section (Desktop default)
+================================ */
+
+.how-we-work {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 120px 24px;
+  border-radius: 32px 32px 0 0;
+  overflow-x: hidden;
+}
+
+.how-we-work-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Header
+================================ */
+
+.how-we-work-header {
+  text-align: center;
+  margin-bottom: 96px;
+}
+
+.how-we-work-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-support);
+}
+
+.how-we-work-title {
+  margin: 0 0 16px 0;
+  font-size: 3rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.how-we-work-description {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   Timeline
+================================ */
+
+.how-we-work-timeline {
+  position: relative;
+  padding-left: 60px;
+}
+
+.how-we-work-line {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--accent-primary);
+  opacity: 0.35;
+}
+
+/* ===============================
+   Step
+================================ */
+
+.how-we-work-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 64px;
+}
+
+.step-index {
+  width: 36px;
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  opacity: 0.6;
+}
+
+.step-content {
+  padding-left: 32px;
+  max-width: 520px;
+}
+
+.step-title {
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.step-description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   Tablet ≤1024px
+================================ */
+
+@media (max-width: 1024px) {
+  .how-we-work {
+    padding: 104px 20px;
+  }
+
+  .how-we-work-title {
+    font-size: 2.6rem;
+  }
+
+  .how-we-work-header {
+    margin-bottom: 80px;
+  }
+
+  .step-content {
+    max-width: 480px;
+  }
+}
+
+/* ===============================
+   Mobile ≤768px
+================================ */
+
+@media (max-width: 768px) {
+  .how-we-work {
+    padding: 96px 20px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .how-we-work-title {
+    font-size: 2.2rem;
+  }
+
+  .how-we-work-description {
+    font-size: 0.95rem;
+  }
+
+  .how-we-work-header {
+    margin-bottom: 72px;
+  }
+
+  .how-we-work-timeline {
+    padding-left: 48px;
+  }
+
+  .step-content {
+    padding-left: 24px;
+  }
+}
+
+/* ===============================
+   Small Mobile ≤480px (CRITICAL)
+================================ */
+
+@media (max-width: 480px) {
+  .how-we-work {
+    padding: 72px 16px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .how-we-work-header {
+    margin-bottom: 56px;
+  }
+
+  .how-we-work-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .how-we-work-description {
+    font-size: 0.9rem;
+  }
+
+  .how-we-work-timeline {
+    padding-left: 40px;
+  }
+
+  .step-index {
+    display: none;
+  }
+
+  .step-content {
+    padding-left: 20px;
+  }
+
+  .step-title {
+    font-size: 1.05rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+  }
+}

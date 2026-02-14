@@ -1,0 +1,53 @@
+/* =====================================
+   Scroll Driven Section Scaling
+===================================== */
+
+/* Create scroll timeline */
+.howWeWork {
+  view-timeline-name: --howwork;
+  view-timeline-axis: block;
+
+  animation: howWorkScale linear both;
+  animation-timeline: --howwork;
+  animation-range: entry 25% cover 100%;
+}
+
+@keyframes howWorkScale {
+  0% {
+    transform: scale(0.5); /* Full width at 25% entry */
+  }
+  15% {
+    transform: scale(1); /* Shrinks at mid view */
+  }
+  100% {
+    transform: scale(1); /* Enlarges again when scrolling upward */
+  }
+}
+
+
+.whoWeWorkWith {
+  view-timeline-name: --whowork;
+  view-timeline-axis: block;
+
+  animation: whoWorkScale linear both;
+  animation-timeline: --whowork;
+  animation-range: entry 25% cover 100%;
+}
+
+@keyframes whoWorkScale {
+  0% {
+    transform: scale(1); /* Starts smaller */
+  }
+  70% {
+    transform: scale(1); /* Enlarges in center */
+  }
+  100% {
+    transform: scale(0.5); /* Shrinks again */
+  }
+}
+
+.howWeWork,
+.whoWeWorkWith {
+  transform-origin: center;
+  will-change: transform;
+}

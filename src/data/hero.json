@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "headline": "We design content and campaigns that turn attention into action.",
+    "subheadline": "We build refined digital experiences that are fast, measurable, and built to scale — crafted for brands that value clarity, performance, and long-term growth.",
+    "primaryCta": {
+      "label": "View Our Work",
+      "href": "/work"
+    },
+    "secondaryCta": {
+      "label": "Schedule a Strategy Call",
+      "href": "#contact"
+    }
+  }
+}

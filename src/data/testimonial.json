@@ -1,0 +1,36 @@
+{
+  "title": "What Our Clients Say",
+  "subtitle": "Real feedback from brands we’ve helped grow",
+  "items": [
+    {
+      "name": "Rohit Malhotra",
+      "designation": "Founder, UrbanFit Studio",
+      "rating": 4,
+      "review": "DigitalGram is one of the best marketing and content creation agencies we’ve worked with. Their team is very professional and understands business goals clearly. The reels, graphics, and ad campaigns were high-quality, and we started receiving better enquiries within a few weeks. Highly recommended!"
+    },
+    {
+      "name": "Neha Kapoor",
+      "designation": "Brand Manager, GlowSkin Clinic",
+      "rating": 5,
+      "review": "DigitalGram creates amazing reels and viral-style content. Their creativity and editing quality is top-class. They helped us improve our Instagram presence and made our brand look much more premium. Very happy with their work!"
+    },
+    {
+      "name": "Aman Verma",
+      "designation": "Owner, Verma Electronics",
+      "rating": 5,
+      "review": "DigitalGram is perfect for small businesses who want real growth. They listen properly, understand the audience, and then create content accordingly. Their marketing strategy is simple and effective. We saw an increase in calls and customer enquiries after starting with them."
+    },
+    {
+      "name": "Pooja Sharma",
+      "designation": "Co-Founder, Aura Interiors",
+      "rating": 5,
+      "review": "The DigitalGram team is very cooperative and responsive. They deliver content on time and always suggest the best ideas for our business. Their photography, reels, and graphic designs are premium quality. Great experience overall."
+    },
+    {
+      "name": "Sandeep Khanna",
+      "designation": "Director, Khanna Realty Group",
+      "rating": 5,
+      "review": "DigitalGram is genuinely different from other agencies. They focus on consistent posting, quality content, and real results. Our engagement improved a lot, and we are now getting regular leads. 100% satisfied and strongly recommended."
+    }
+  ]
+}

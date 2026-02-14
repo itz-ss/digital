@@ -1,0 +1,38 @@
+{
+  "title": "Let's Build Something Great Together",
+  "subtitle": "Ready to scale your business? Get in touch and let's discuss how we can help you achieve your goals.",
+  "contactInfo": {
+    "email": {
+      "label": "Email",
+      "value": "hello@digitalgram.com",
+      "href": "mailto:hello@digitalgram.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+91 6388060502",
+      "href": "tel:+916388060502"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "+91 6388060502",
+      "href": "https://wa.me/916388060502"
+    }
+  },
+  "socialLinks": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/digitalgram",
+      "icon": "instagram"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/company/digitalgram",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/@digitalgram",
+      "icon": "youtube"
+    }
+  ]
+}

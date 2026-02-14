@@ -1,0 +1,32 @@
+{
+  "sectionTitle": "Who We Work With",
+  "sectionSubtitle": "Supporting Businesses at Different Stages and Industries",
+  "description": "We work with a wide range of businesses — from growing startups to established brands. While each industry has its own challenges, our approach adapts to what matters most for your audience and goals.",
+
+  "industries": [
+    {
+      "id": "healthcare",
+      "icon": "🏥",
+      "title": "Healthcare & Wellness",
+      "description": "We support healthcare providers and wellness brands in communicating clearly, building trust, and connecting with people in meaningful ways."
+    },
+    {
+      "id": "real-estate",
+      "icon": "🏢",
+      "title": "Real Estate",
+      "description": "From individual agents to property brands, we help present spaces, stories, and opportunities that attract the right buyers and tenants."
+    },
+    {
+      "id": "education",
+      "icon": "🎓",
+      "title": "Education & Learning",
+      "description": "We work with schools, institutes, and online platforms to improve visibility, engagement, and enrollment through thoughtful digital content."
+    },
+    {
+      "id": "interior-design",
+      "icon": "🛋️",
+      "title": "Interior Design & Creative Businesses",
+      "description": "We help creative professionals showcase their work, highlight their process, and reach clients who value good design."
+    }
+  ]
+}

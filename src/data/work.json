@@ -1,0 +1,65 @@
+{
+  "projects": [
+    {
+      "id": "content",
+      "label": "Content Creation",
+      "description": "Short-form reels, creative videos, and social content built to capture attention.",
+      "videos": [
+        {
+          "id": "content-reels-1",
+          "title": "Instagram Reel Campaign",
+          "type": "reel",
+          "sources": {
+            "youtube": [
+             
+              "https://www.youtube.com/shorts/UeGhClDQy54",
+              "https://www.youtube.com/shorts/icfD9FpAhEQ",
+              "https://www.youtube.com/shorts/AXNcJfqoHo0"
+           
+            ]
+          }
+        }
+      ]
+    },
+
+   
+
+    {
+      "id": "influencer",
+      "label": "Influencer Marketing & PR",
+      "description": "Influencer collaborations, brand integrations, and media-led campaigns.",
+      "videos": [
+        {
+          "id": "influencer-1",
+          "title": "Influencer Brand Collaboration",
+          "type": "video",
+          "sources": {
+            "youtube": [
+              "https://www.youtube.com/watch?v=EWqL0ZF8RFQ",
+              "https://www.youtube.com/watch?v=BMm6UDroIYc"
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "production",
+      "label": "Brand Shoots",
+      "description": "Professional brand shoots, product videos, and creative production.",
+      "videos": [
+        {
+          "id": "shoots-1",
+          "title": "Brand Shoot Highlights",
+          "type": "video",
+          "sources": {
+            "youtube": [
+              "https://www.youtube.com/watch?v=d3oOpMgkAbI"
+            ]
+            
+          }
+        }
+      ]
+    }
+  ]
+}

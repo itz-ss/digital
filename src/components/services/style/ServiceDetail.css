@@ -1,0 +1,249 @@
+/* =====================================
+   Service Detail Page (Desktop default)
+===================================== */
+
+.service-detail {
+  padding: 96px 24px 120px;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+.service-detail-container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   Hero
+===================================== */
+
+.service-hero {
+  margin-bottom: 72px;
+}
+
+.service-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background-color: var(--accent-energy);
+  padding: 4px 8px;
+  border-radius: 32px;
+  width: fit-content;
+}
+
+.service-title {
+  margin: 0 0 18px 0;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.service-intro {
+  max-width: 720px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* =====================================
+   Image
+===================================== */
+
+.service-image {
+  margin: 72px 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================
+   Content
+===================================== */
+
+.service-content {
+  max-width: 920px;
+  margin-bottom: 72px;
+  text-align: justify;
+}
+
+.service-content p {
+  margin-bottom: 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* =====================================
+   Deliverables
+===================================== */
+
+.service-deliverables {
+  margin-top: 80px;
+}
+
+.deliverables-title {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.deliverables-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* =====================================
+   Footer
+===================================== */
+
+.service-footer {
+  margin-top: 96px;
+}
+
+.service-back {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+.service-back:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   Tablet ≤1024px
+===================================== */
+
+@media (max-width: 1024px) {
+  .service-detail {
+    padding: 88px 20px 104px;
+  }
+
+  .service-title {
+    font-size: 2.6rem;
+  }
+
+  .service-intro {
+    font-size: 1.05rem;
+  }
+
+  .service-image {
+    margin: 64px 0;
+  }
+}
+
+/* =====================================
+   Mobile ≤768px
+===================================== */
+
+@media (max-width: 768px) {
+  .service-detail {
+    padding: 80px 20px 96px;
+  }
+
+  .service-hero {
+    margin-bottom: 56px;
+  }
+
+  .service-title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
+  .service-intro {
+    font-size: 1rem;
+  }
+
+  .service-image {
+    margin: 56px 0;
+  }
+
+  .service-content {
+    text-align: left; /* better readability on mobile */
+  }
+
+  .service-content p {
+    font-size: 0.95rem;
+  }
+
+  .service-deliverables {
+    margin-top: 64px;
+  }
+}
+
+/* =====================================
+   Small Mobile ≤480px (CRITICAL)
+===================================== */
+
+@media (max-width: 480px) {
+  .service-detail {
+    padding: 64px 16px 80px;
+  }
+
+  .service-hero {
+    margin-bottom: 40px;
+  }
+
+  .service-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .service-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .service-image {
+    margin: 40px 0;
+    border-radius: 14px;
+  }
+
+  .service-content p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+
+  .service-deliverables {
+    margin-top: 48px;
+  }
+
+  .deliverables-title {
+    font-size: 1.3rem;
+  }
+
+  .deliverables-list li {
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
+
+  .service-footer {
+    margin-top: 64px;
+  }
+
+  .service-back {
+    font-size: 0.9rem;
+  }
+}
