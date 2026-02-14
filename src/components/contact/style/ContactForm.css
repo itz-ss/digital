@@ -5,11 +5,13 @@
 .contact {
   padding: 96px 24px;
   background: var(--bg-primary);
+  
 }
 
 .contact-container {
   max-width: 720px;
   margin: 0 auto;
+  overflow-y: auto;
 }
 
 /* ===============================
@@ -43,7 +45,7 @@
 ================================ */
 
 .contact-form {
-  background: #ffffff;
+  background: var(--bg-soft);
   padding: 40px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -72,7 +74,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 0.95rem;
   font-family: inherit;
-  background: #fff;
+  /* background: #fff; */
   transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 
@@ -82,6 +84,21 @@
   border-color: var(--blue-primary);
   box-shadow: 0 0 0 3px var(--blue-soft);
 }
+
+.form-field > select {
+  background-color: var(--bg-primary);
+  padding: 10px 10px;
+  border: 0.02px solid var(--highlight-soft);
+  border-radius: 32px;
+  font-size: medium;
+} 
+
+.form-field > select > option {
+ background-color: var(--bg-primary); 
+  font-size: small;
+}
+
+
 
 /* ===============================
    Button
@@ -151,4 +168,50 @@
   .contact-header h2 {
     font-size: 1.8rem;
   }
+}
+
+
+
+/* ===============================
+   Contact Modal
+================================ */
+
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  animation: fadeIn 300ms ease forwards;
+}
+
+.contact-modal {
+  width: min(92vw, 640px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 24px;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  scrollbar-width: none;
+  transform: translateY(24px) scale(0.98);
+  opacity: 0;
+  animation: modalIn 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  font-size: 18px;
 }

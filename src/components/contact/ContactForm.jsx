@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import servicesData from "@/data/services.json";
+import Button from "../UI/Button";
 import "./style/ContactForm.css";
 
 export default function ContactForm() {
@@ -119,13 +120,14 @@ export default function ContactForm() {
             />
           </div>
 
-          <button
+          <Button
             type="submit"
             className="contact-submit"
             disabled={loading}
+            variant="secondary"
           >
             {loading ? "Sending..." : "Send Message"}
-          </button>
+          </Button>
 
           {status === "success" && (
             <p className="form-success">
