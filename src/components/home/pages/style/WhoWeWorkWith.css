@@ -4,10 +4,8 @@
 
 .who-we-work-with {
   padding: 96px 24px;
-  background-color: var(--bg-primary);
   color: var(--text-primary);
   border-radius: 0 0 32px 32px;
-  border-top: 1px solid var(--border-subtle);
 }
 
 .who-we-work-with-container {
@@ -59,22 +57,30 @@
    Card
 ================================ */
 
-.industry-card {
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  background-color: var(--bg-soft);
-  border: 1px solid var(--border-subtle);
 
-  transition:
-    background-color 200ms ease,
-    box-shadow 200ms ease,
-    transform 200ms ease;
+/* Bottom-to-up glow animation on hover */
+.industry-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.industry-card:hover {
-  background-color: var(--bg-muted);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
+.industry-card:hover::before {
+  animation: glow-up 0.8s ease-out forwards;
+}
+
+/* Top-to-down glow animation on hover-out */
+.industry-card:not(:hover)::before {
+  animation: glow-down 0.8s ease-out forwards;
 }
 
 /* Icon */
@@ -82,7 +88,8 @@
   display: block;
   margin-bottom: 16px;
   font-size: 1.6rem;
-  color: var(--accent-primary);
+  color: var(--text-primary);
+  opacity: 0.9;
 }
 
 /* Text */

@@ -2,6 +2,7 @@
 
 import servicesData from "@/data/services.json";
 import Link from "next/link";
+import Card from "@/components/UI/Card";
 import RevealWrapper from "@/components/UI/RevealWrapper";
 import "./style/homeServices.css";
 
@@ -37,7 +38,7 @@ export default function HomeServices() {
             delay={index * 120}
             direction="up"
           >
-            <div className="service-card">
+            <Card variant="blue-accent" className="service-card">
               <h3 className="service-title-card">
                 {service.label}
               </h3>
@@ -52,7 +53,7 @@ export default function HomeServices() {
               >
                 Know more →
               </Link>
-            </div>
+            </Card>
           </RevealWrapper>
         ))}
       </div>

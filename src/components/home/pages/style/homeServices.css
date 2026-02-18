@@ -4,7 +4,6 @@
 
 .services-preview {
   padding: 64px 24px 72px;
-  background-color: var(--bg-soft);
 }
 
 /* ===============================
@@ -72,21 +71,44 @@
 ================================ */
 
 .service-card {
-  padding: 28px;
-  background-color: var(--bg-primary);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
 
-  transition: box-shadow 200ms ease, transform 200ms ease;
+/* Bottom-to-up glow animation on hover */
+.service-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-card:hover::before {
+  animation: glow-up 0.8s ease-out forwards;
+}
+
+/* Top-to-down glow animation on hover-out */
+.service-card:not(:hover)::before {
+  animation: glow-down 0.8s ease-out forwards;
 }
 
 .service-card:hover {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  transform: translateY(-3px);
+  background: linear-gradient(135deg, hsla(220, 80%, 18%, 0.2) 0%, hsla(0, 0%, 10%, 0.6) 100%);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.5),
+    0 0 24px hsla(220, 80%, 60%, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  transform: translateY(-4px);
+  border-color: hsla(220, 80%, 60%, 0.25);
 }
 
 .service-title-card {
@@ -106,9 +128,12 @@
 .service-link {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--blue-primary);
-  text-decoration: none;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--text-muted);
+  text-underline-offset: 3px;
   align-self: flex-start;
+  transition: all 200ms ease;
 }
 
 .service-link:hover {

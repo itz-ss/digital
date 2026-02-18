@@ -3,16 +3,19 @@
 ================================ */
 
 .footer {
-  background-color: var(--bg-mute); /* Dark Slate */
+  background-color: var(--bg-secondary); /* Dark Slate */
   border-top: 1px solid var(--border-subtle);
   border-radius: 20px 20px 0 0;
   color: var(--text-primary);
+  position: relative;
+
 }
 
 .footer-container {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 72px 24px 32px;
+    
 }
 
 /* ===============================
@@ -38,7 +41,7 @@
   max-width: 280px;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* ===============================

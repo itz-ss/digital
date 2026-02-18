@@ -4,7 +4,6 @@
 
 .testimonials {
   padding: 96px 0;
-  background-color: var(--bg-soft);
 }
 
 .testimonials-container {
@@ -51,7 +50,8 @@
 }
 
 .testimonials-scroll::-webkit-scrollbar {
-  display: none; /* Apple-style clean */
+  display: none;
+  /* Apple-style clean */
 }
 
 /* ===============================
@@ -59,11 +59,8 @@
 ================================ */
 
 .testimonial-card {
-  flex: 0 0 360px; /* KEY: horizontal scalability */
-  padding: 28px;
-  background-color: var(--bg-primary);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  flex: 0 0 360px;
+  /* KEY: horizontal scalability */
 
   display: flex;
   flex-direction: column;

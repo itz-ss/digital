@@ -1,4 +1,5 @@
 import testimonialsData from "@/data/testimonial.json";
+import Card from "@/components/UI/Card";
 import RevealWrapper from "@/components/UI/RevealWrapper";
 import "./style/Testimonials.css";
 
@@ -10,38 +11,38 @@ export default function Testimonials() {
       <div className="testimonials-container">
         {/* Header */}
         <div className="testimonials-header">
-          <RevealWrapper direction="up">  
-          <h2 className="testimonials-title">{title}</h2>
+          <RevealWrapper direction="up">
+            <h2 className="testimonials-title">{title}</h2>
           </RevealWrapper>
-          <RevealWrapper direction="up" delay={120}>  
-          <p className="testimonials-subtitle">{subtitle}</p>
+          <RevealWrapper direction="up" delay={120}>
+            <p className="testimonials-subtitle">{subtitle}</p>
           </RevealWrapper>
         </div>
 
         {/* Horizontal Scroll */}
         <div className="testimonials-scroll">
           {items.map((item, index) => (
-            <div className="testimonial-card" key={index}>
-              <RevealWrapper direction="up" delay={240}>  
-              <div className="testimonial-rating">
-                {"★".repeat(item.rating)}
-                {"☆".repeat(5 - item.rating)}
-              </div>
-              </RevealWrapper>
-
-              <RevealWrapper direction="up" delay={240}>  
-              <p className="testimonial-review">“{item.review}”</p>
-              </RevealWrapper>
-
-              <RevealWrapper direction="up" delay={240}>  
-              <div className="testimonial-author">
-                <span className="author-name">{item.name}</span>
-                <span className="author-designation">
-                  {item.designation}
-                </span>
+            <Card className="testimonial-card" key={index} variant="blue-accent">
+              <RevealWrapper direction="up" delay={240}>
+                <div className="testimonial-rating">
+                  {"★".repeat(item.rating)}
+                  {"☆".repeat(5 - item.rating)}
                 </div>
               </RevealWrapper>
-            </div>
+
+              <RevealWrapper direction="up" delay={240}>
+                <p className="testimonial-review">“{item.review}”</p>
+              </RevealWrapper>
+
+              <RevealWrapper direction="up" delay={240}>
+                <div className="testimonial-author">
+                  <span className="author-name">{item.name}</span>
+                  <span className="author-designation">
+                    {item.designation}
+                  </span>
+                </div>
+              </RevealWrapper>
+            </Card>
           ))}
         </div>
       </div>

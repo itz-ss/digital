@@ -1,6 +1,7 @@
 import howWeWorkData from "@/data/howWeWork.json";
 import RevealWrapper from "@/components/UI/RevealWrapper";
 import "./style/HowWeWorkTimeline.css";
+import Card from "@/components/UI/Card";
 
 export default function HowWeWorkTimeline() {
   return (
@@ -37,11 +38,12 @@ export default function HowWeWorkTimeline() {
               </span>
 
               <div className="step-dot" />
-
+              <Card variant="blue-accent">  
               <div className="step-content">
                 <h3 className="step-title">{step.title}</h3>
                 <p className="step-description">{step.description}</p>
               </div>
+              </Card>
             </div>
           ))}
           </RevealWrapper>

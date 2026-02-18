@@ -14,13 +14,18 @@
 
 @keyframes howWorkScale {
   0% {
-    transform: scale(0.5); /* Full width at 25% entry */
+    transform: scale(0.5);
+    /* Full width at 25% entry */
   }
+
   15% {
-    transform: scale(1); /* Shrinks at mid view */
+    transform: scale(1);
+    /* Shrinks at mid view */
   }
+
   100% {
-    transform: scale(1); /* Enlarges again when scrolling upward */
+    transform: scale(1);
+    /* Enlarges again when scrolling upward */
   }
 }
 
@@ -36,13 +41,18 @@
 
 @keyframes whoWorkScale {
   0% {
-    transform: scale(1); /* Starts smaller */
+    transform: scale(1);
+    /* Starts smaller */
   }
+
   70% {
-    transform: scale(1); /* Enlarges in center */
+    transform: scale(1);
+    /* Enlarges in center */
   }
+
   100% {
-    transform: scale(0.5); /* Shrinks again */
+    transform: scale(0.5);
+    /* Shrinks again */
   }
 }
 

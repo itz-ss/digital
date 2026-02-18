@@ -11,7 +11,6 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      
       <div className="hero-container">
 
         <RevealWrapper direction="up">

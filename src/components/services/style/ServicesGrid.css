@@ -29,7 +29,7 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-support); /* Soft Mint */
+  color: var(--text-muted);
 }
 
 .services-grid-title {
@@ -62,26 +62,48 @@
 ================================ */
 
 .services-grid-card {
-  padding: 28px;
-  background-color: var(--bg-soft);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-  text-decoration: none;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
 
-  transition:
-    box-shadow 200ms ease,
-    transform 200ms ease,
-    border-color 200ms ease;
+/* Bottom-to-up glow animation on hover */
+.services-grid-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services-grid-card:hover::before {
+  animation: glow-up 0.8s ease-out forwards;
+}
+
+/* Top-to-down glow animation on hover-out */
+.services-grid-card:not(:hover)::before {
+  animation: glow-down 0.8s ease-out forwards;
 }
 
 .services-grid-card:hover {
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
-  transform: translateY(-3px);
-  border-color: var(--accent-primary); /* Purple highlight */
+  background: linear-gradient(135deg, hsla(0, 0%, 12%, 0.7) 0%, hsla(0, 0%, 10%, 0.6) 100%);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.5),
+    0 0 24px hsla(0, 85%, 60%, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  transform: translateY(-4px);
+  border-color: hsla(0, 85%, 60%, 0.3);
+}
+
+.services-grid-card:hover::after {
+  opacity: 1;
 }
 
 .card-title {
@@ -100,12 +122,16 @@
 .card-link {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--accent-primary); /* Purple */
-  transition: color 200ms ease;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--text-muted);
+  text-underline-offset: 4px;
+  transition: all 200ms ease;
 }
 
 .card-link:hover {
-  color: var(--accent-energy); /* Orange */
+  color: var(--text-primary);
+  text-decoration-color: var(--accent-primary);
 }
 
 /* ===============================

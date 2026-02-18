@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import siteData from "@/data/site.json";
+import Button from "@/components/UI/Button";
 import ContactForm from "@/components/contact/ContactForm";
 import "./style/Navbar.css";
 
@@ -39,26 +40,28 @@ export default function Navbar() {
 
             {/* Mobile CTA inside dropdown */}
             <div className="mobile-cta">
-              <button
+              <Button
                 className="navbar-cta"
                 onClick={() => {
                   setMenuOpen(false);
                   setContactModalOpen(true);
                 }}
+                variant="primary"
               >
                 Get in Touch
-              </button>
+              </Button>
             </div>
           </nav>
 
           {/* Desktop CTA */}
           <div className="desktop-cta">
-            <button
+            <Button
               className="navbar-cta"
               onClick={() => setContactModalOpen(true)}
+              variant="primary"
             >
               Get in Touch
-            </button>
+            </Button>
           </div>
 
           {/* Hamburger */}

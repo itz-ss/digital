@@ -3,6 +3,7 @@
 import { useState } from "react";
 import workData from "@/data/work.json";
 import RevealWrapper from "../UI/RevealWrapper";
+import WorkBackground from "@/components/backgroundAnimation/WorkBackground";
 import "./style/Work.css";
 
 export default function Work() {
@@ -52,7 +53,7 @@ export default function Work() {
 
       // already embed
       if (u.pathname.includes("/embed/")) return url;
-    } catch {}
+    } catch { }
 
     return url;
   };
@@ -91,105 +92,104 @@ export default function Work() {
 
   return (
     <>
+      <WorkBackground />
       <section className="work">
         <div className="work-container">
 
           {/* Header */}
           <header className="work-header">
-            <RevealWrapper direction="up" delay={240}>  
-            <h2 className="work-title">Our Work</h2>
+            <RevealWrapper direction="up" delay={240}>
+              <h2 className="work-title">Our Work</h2>
             </RevealWrapper>
-            <RevealWrapper direction="up" delay={240}>  
-            <p className="work-intro">
-              A selection of reels, videos, and digital experiences built for growth-focused brands.
-            </p>
+            <RevealWrapper direction="up" delay={240}>
+              <p className="work-intro">
+                A selection of reels, videos, and digital experiences built for growth-focused brands.
+              </p>
             </RevealWrapper>
           </header>
 
           {/* Filters */}
-          <RevealWrapper direction="up" delay={240}>  
-          <div className="work-filters">
-            {filters.map(filter => (
-              <button
-                key={filter}
-                className={`filter-btn ${activeFilter === filter ? "active" : ""}`}
-                onClick={() => setActiveFilter(filter)}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
+          <RevealWrapper direction="up" delay={240}>
+            <div className="work-filters">
+              {filters.map(filter => (
+                <button
+                  key={filter}
+                  className={`filter-btn ${activeFilter === filter ? "active" : ""}`}
+                  onClick={() => setActiveFilter(filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
           </RevealWrapper>
-          
+
           {/* Groups */}
-          <RevealWrapper direction="up" delay={240}>  
-          {projects.map(project => (
-            <div key={project.id} className="work-group">
-              <div className="work-group-header">
-                <div> 
-                  <RevealWrapper direction="up" delay={240}>  
-                  <h3>{project.label}</h3>
-                  </RevealWrapper>
-                  <RevealWrapper direction="up" delay={240}>  
-                  <p>{project.description}</p>
-                  </RevealWrapper>
+          <RevealWrapper direction="up" delay={240}>
+            {projects.map(project => (
+              <div key={project.id} className="work-group">
+                <div className="work-group-header">
+                  <div>
+                    <RevealWrapper direction="up" delay={240}>
+                      <h3>{project.label}</h3>
+                    </RevealWrapper>
+                    <RevealWrapper direction="up" delay={240}>
+                      <p>{project.description}</p>
+                    </RevealWrapper>
+                  </div>
+                </div>
+
+                <div
+                  className={`work-row ${project.videos[0]?.type === "reel" ? "reels" : "videos"
+                    }`}
+                >
+                  {project.videos.flatMap(video =>
+                    Object.values(video.sources)
+                      .flat()
+                      .map((url, index) => {
+                        const mediaId = `${video.id}-${index}`;
+
+                        return (
+
+                          <div
+                            key={mediaId}
+                            className={`work-card ${video.type === "reel" ? "reel" : "video"
+                              }`}
+                            onClick={() =>
+                              openModal({
+                                id: mediaId,
+                                url,
+                                type: video.type
+                              })
+                            }
+                          >
+                            {renderMedia(url, mediaId)}
+                          </div>
+
+                        );
+                      })
+                  )}
                 </div>
               </div>
-
-              <div
-                className={`work-row ${
-                  project.videos[0]?.type === "reel" ? "reels" : "videos"
-                }`}
-              >
-                {project.videos.flatMap(video =>
-                  Object.values(video.sources)
-                    .flat()
-                    .map((url, index) => {
-                      const mediaId = `${video.id}-${index}`;
-
-                      return (
-                        
-                        <div
-                          key={mediaId}
-                          className={`work-card ${
-                            video.type === "reel" ? "reel" : "video"
-                          }`}
-                          onClick={() =>
-                            openModal({
-                              id: mediaId,
-                              url,
-                              type: video.type
-                            })
-                          }
-                        >
-                          {renderMedia(url, mediaId)}
-                        </div>
-                       
-                      );
-                    })
-                )}
-              </div>
-            </div>
-          ))}
+            ))}
           </RevealWrapper>
         </div>
       </section>
 
       {/* Modal */}
       {activeMedia && (
-        <RevealWrapper direction="up" delay={240}>  
-        <div className="work-modal" onClick={closeModal}>
-          <div
-            className="work-modal-content"
-            onClick={e => e.stopPropagation()}
-          > 
-            <button className="modal-close" onClick={closeModal}>
-              ×
-            </button>
+        <RevealWrapper direction="up" delay={240}>
+          <div className="work-modal" onClick={closeModal}>
+            <div
+              className="work-modal-content"
+              onClick={e => e.stopPropagation()}
+            >
+              <button className="modal-close" onClick={closeModal}>
+                ×
+              </button>
 
-            {renderMedia(activeMedia.url, activeMedia.id)}
+              {renderMedia(activeMedia.url, activeMedia.id)}
+            </div>
           </div>
-        </div>
         </RevealWrapper>
       )}
     </>

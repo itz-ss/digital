@@ -3,7 +3,6 @@
 ================================ */
 
 .how-we-work {
-  background-color: var(--bg-primary);
   color: var(--text-primary);
   padding: 120px 24px;
   border-radius: 32px 32px 0 0;
@@ -185,7 +184,7 @@
   }
 
   .step-index {
-    display: none;
+    margin: 0 10px 0 0;
   }
 
   .step-content {

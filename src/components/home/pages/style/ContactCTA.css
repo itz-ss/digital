@@ -4,7 +4,6 @@
 
 .contact-cta {
   padding: 120px 24px;
-  background-color: var(--bg-primary);
 }
 
 .contact-cta-container {
@@ -51,33 +50,51 @@
 
 .contact-info-item {
   text-decoration: none;
-  padding: 18px 24px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-  background-color: var(--bg-soft);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 220px;
+}
 
-  transition:
-    background-color 200ms ease,
-    transform 200ms ease,
-    box-shadow 200ms ease;
+/* Bottom-to-up glow animation on hover */
+.contact-info-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-info-item:hover::before {
+  animation: glow-up 0.8s ease-out forwards;
+}
+
+/* Top-to-down glow animation on hover-out */
+.contact-info-item:not(:hover)::before {
+  animation: glow-down 0.8s ease-out forwards;
 }
 
 .contact-info-item:hover {
-  background-color: var(--bg-muted);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, hsla(0, 0%, 12%, 0.7) 0%, hsla(0, 0%, 10%, 0.6) 100%);
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  border-color: hsla(0, 0%, 100%, 0.12);
 }
 
 .contact-info-label {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--highlight-ui);
+  color: var(--text-muted);
   margin-bottom: 6px;
 }
 
