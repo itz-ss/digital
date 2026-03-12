@@ -1,0 +1,52 @@
+{
+  "clusters": [
+    {
+      "service": "social-media-marketing",
+      "primary": "Social Media Marketing Agency Kanpur",
+      "keywords": [
+        "Social Media Management Kanpur",
+        "Instagram Marketing Agency Kanpur",
+        "Best SMM Agency in Shayam Nagar",
+        "Facebook Ads Management Kanpur",
+        "Social Media Growth Services Kanpur"
+      ],
+      "intent": "commercial"
+    },
+    {
+      "service": "seo",
+      "primary": "SEO Services Kanpur",
+      "keywords": [
+        "SEO Company in Kanpur",
+        "Best SEO Agency Kanpur",
+        "Local SEO Services Kanpur",
+        "Search Engine Optimization Expert Kanpur",
+        "SEO Agency Shayam Nagar"
+      ],
+      "intent": "commercial"
+    },
+    {
+      "service": "web-development",
+      "primary": "Website Development Company Kanpur",
+      "keywords": [
+        "Web Design Services Kanpur",
+        "Landing Page Designer Kanpur",
+        "Ecommerce Website Development Kanpur",
+        "Best Web Development Agency Shayam Nagar",
+        "Conversion Funnel Designer Kanpur"
+      ],
+      "intent": "commercial"
+    },
+    {
+      "service": "performance-marketing",
+      "primary": "Performance Marketing Agency Kanpur",
+      "keywords": [
+        "Google Ads Agency Kanpur",
+        "Meta Ads Expert Kanpur",
+        "PPC Services Kanpur",
+        "Lead Generation Agency Kanpur",
+        "Digital Advertising Kanpur"
+      ],
+      "intent": "commercial"
+    }
+  ]
+}

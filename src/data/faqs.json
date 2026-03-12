@@ -1,0 +1,26 @@
+{
+  "general": [
+    {
+      "question": "Why should I choose a digital marketing agency in Kanpur?",
+      "answer": "A local agency like DigitalGram understands the Kanpur market, consumer behavior, and local nuances, allowing for more targeted and effective marketing strategies."
+    },
+    {
+      "question": "How long does it take to see results from SEO?",
+      "answer": "SEO is a long-term strategy. While some improvements can be seen in 3-4 months, significant growth typically takes 6-12 months."
+    }
+  ],
+  "services": {
+    "social-media-marketing": [
+      {
+        "question": "Which platforms are best for my business in Kanpur?",
+        "answer": "For most businesses in Kanpur, Instagram and Facebook are highly effective. We analyze your target audience to recommend the best platforms."
+      }
+    ],
+    "seo": [
+      {
+        "question": "Can you help my business rank in Shayam Nagar specifically?",
+        "answer": "Yes, we specialize in Local SEO to ensure your business appears in searches for specific areas like Shayam Nagar, Kakadeo, and Civil Lines."
+      }
+    ]
+  }
+}

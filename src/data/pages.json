@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "type": "static",
+      "template": "home"
+    },
+    {
+      "path": "/about",
+      "type": "static",
+      "template": "about"
+    },
+    {
+      "path": "/services",
+      "type": "static",
+      "template": "services"
+    },
+    {
+      "path": "/work",
+      "type": "static",
+      "template": "work"
+    }
+  ]
+}

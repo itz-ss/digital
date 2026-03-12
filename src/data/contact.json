@@ -9,13 +9,13 @@
     },
     "phone": {
       "label": "Phone",
-      "value": "+91 6388060502",
-      "href": "tel:+916388060502"
+      "value": "+91 7348192459",
+      "href": "tel:+917348192459"
     },
     "whatsapp": {
       "label": "WhatsApp",
-      "value": "+91 6388060502",
-      "href": "https://wa.me/916388060502"
+      "value": "+91 9454552549",
+      "href": "https://wa.me/919454552549"
     }
   },
   "socialLinks": [
@@ -31,7 +31,7 @@
     },
     {
       "platform": "YouTube",
-      "url": "https://youtube.com/@digitalgram",
+      "url": "https://www.youtube.com/@thedigitalgram",
       "icon": "youtube"
     }
   ]

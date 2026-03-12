@@ -1,0 +1,22 @@
+{
+  "default": {
+    "title": "DigitalGram | Best Digital Marketing Agency in Kanpur",
+    "description": "DigitalGram is the leading digital marketing agency in Kanpur, specializing in SEO, Social Media, and Performance Marketing for growth-focused businesses.",
+    "ogImage": "/og-image.jpg",
+    "twitterHandle": "@digitalgram"
+  },
+  "templates": {
+    "service_location": {
+      "title": "{service} Services in {location} | DigitalGram {location}",
+      "description": "Looking for {service} in {location}? DigitalGram offers top-rated {service} solutions in {location}, India. Scale your business with our expert national-level marketing team."
+    },
+    "service_india": {
+      "title": "Best {service} Agency in India | DigitalGram National Presence",
+      "description": "Ranked #1 for {service} in India. DigitalGram helps businesses across Delhi, Mumbai, and Bangalore scale with performance-driven marketing."
+    },
+    "service_industry": {
+      "title": "{service} for {industry} Companies | DigitalGram",
+      "description": "Specialized {service} for {industry} businesses. DigitalGram helps {industry} companies in Kanpur grow with data-driven marketing strategies."
+    }
+  }
+}

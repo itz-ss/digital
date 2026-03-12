@@ -26,7 +26,7 @@ export default function ContactCTA() {
               key={index}
               href={item.href}
               className="contact-info-item"
-              variant="blue-accent"
+              variant="blue-accent" 
             >
               <RevealWrapper direction="up" delay={240}>
                 <span className="contact-info-label">{item.label}</span>

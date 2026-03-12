@@ -23,7 +23,15 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="navbar-logo">
-            {siteData.logoText}
+            {siteData.logo?.header ? (
+              <img 
+                src={siteData.logo.header} 
+                alt={siteData.logo.alt || siteData.name} 
+                className="nav-logo-img"
+              />
+            ) : (
+              siteData.logoText
+            )}
           </Link>
 
           {/* Center Navigation */}
@@ -48,7 +56,7 @@ export default function Navbar() {
                 }}
                 variant="primary"
               >
-                Get in Touch
+                {siteData.uiContent.common.buttons.getInTouch}
               </Button>
             </div>
           </nav>
@@ -60,7 +68,7 @@ export default function Navbar() {
               onClick={() => setContactModalOpen(true)}
               variant="primary"
             >
-              Get in Touch
+              {siteData.uiContent.common.buttons.getInTouch}
             </Button>
           </div>
 

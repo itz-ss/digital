@@ -1,0 +1,122 @@
+{
+  "city": "Kanpur",
+  "state": "Uttar Pradesh",
+  "country": "India",
+  "target_areas": [
+    {
+      "slug": "shayam-nagar",
+      "name": "Shayam Nagar",
+      "pincode": "208013",
+      "landmarks": ["Shyam Nagar Park", "PAC Ground"],
+      "description": "Premium residential and commercial hub in South Kanpur."
+    },
+    {
+      "slug": "kakadeo",
+      "name": "Kakadeo",
+      "pincode": "208025",
+      "landmarks": ["Coachings Hub"],
+      "description": "Educational hub of Kanpur with high density of startups and students."
+    },
+    {
+      "slug": "swaroop-nagar",
+      "name": "Swaroop Nagar",
+      "pincode": "208002",
+      "landmarks": ["Motijheel", "Lala Lajpat Rai Hospital"],
+      "description": "Upscale residential area with high-end retail and business centers."
+    },
+    {
+      "slug": "kidwai-nagar",
+      "name": "Kidwai Nagar",
+      "pincode": "208011",
+      "landmarks": ["Hanuman Mandir"],
+      "description": "Densely populated commercial and residential district."
+    },
+    {
+      "slug": "civil-lines",
+      "name": "Civil Lines",
+      "pincode": "208001",
+      "landmarks": ["Green Park Stadium", "Kutchery"],
+      "description": "The administrative and corporate heart of Kanpur."
+    },
+    {
+      "slug": "delhi-ncr",
+      "name": "Delhi NCR",
+      "state": "Delhi",
+      "pincode": "110001",
+      "landmarks": ["Cyber City", "Connaught Place"],
+      "description": "The national capital region and one of the world's largest business hubs."
+    },
+    {
+      "slug": "mumbai",
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "landmarks": ["BKC", "Nariman Point"],
+      "description": "Financial capital of India with a massive density of startups and corporations."
+    },
+    {
+      "slug": "bangalore",
+      "name": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560001",
+      "landmarks": ["Electronic City", "Koramangala"],
+      "description": "Silicon Valley of India, home to the country's most innovative tech companies."
+    },
+    {
+      "slug": "hyderabad",
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500001",
+      "landmarks": ["HITEC City", "Gachibowli"],
+      "description": "Major global tech hub and healthcare center of South India."
+    },
+    {
+      "slug": "ahmedabad",
+      "name": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001",
+      "landmarks": ["GIFT City"],
+      "description": "The commercial heart of Gujarat and a rising financial center."
+    },
+    {
+      "slug": "pune",
+      "name": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "landmarks": ["Hinjewadi IT Park"],
+      "description": "Automotive and IT hub with a highly educated workforce."
+    },
+    {
+      "slug": "kolkata",
+      "name": "Kolkata",
+      "state": "West Bengal",
+      "pincode": "700001",
+      "landmarks": ["Salt Lake Sector V"],
+      "description": "Major commercial and cultural hub of East India."
+    },
+    {
+      "slug": "jaipur",
+      "name": "Jaipur",
+      "state": "Rajasthan",
+      "pincode": "302001",
+      "landmarks": ["World Trade Park"],
+      "description": "Fast-growing Tier-2 city with a strong focus on tourism and tech startups."
+    },
+    {
+      "slug": "lucknow",
+      "name": "Lucknow",
+      "state": "Uttar Pradesh",
+      "pincode": "226001",
+      "landmarks": ["Gomti Nagar", "Hazratganj"],
+      "description": "Administrative capital of Uttar Pradesh and a rapidly growing business center."
+    },
+    {
+      "slug": "noida",
+      "name": "Noida",
+      "state": "Uttar Pradesh",
+      "pincode": "201301",
+      "landmarks": ["Film City", "Sector 62"],
+      "description": "Major IT and outsourced services hub in Uttar Pradesh, part of NCR."
+    }
+  ]
+}

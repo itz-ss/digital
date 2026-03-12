@@ -71,6 +71,10 @@
   transform: translateY(-1px);
 }
 
+.nav-logo-img{
+  background-color: #ffffff7c;
+  border-radius: 12px;
+}
 /* ===============================
    Navigation Links
 ================================ */

@@ -1,12 +1,67 @@
 {
   "name": "DigitalGram",
   "logoText": "DigitalGram",
+  "logo": {
+    "header": "/logo/favicon-32x32.png",
+    "footer": "/logo/android-chrome-192x192.png",
+    "favicon": "/favicon.ico",
+    "alt": "DigitalGram Logo"
+  },
   "tagline": "Digital experiences designed for growth",
+  "city": "Kanpur",
+  "state": "Uttar Pradesh",
+  "country": "India",
+  "baseUrl": "https://digitalgram.com",
   "navigation": [
     { "label": "Home", "href": "/" },
     { "label": "Services", "href": "/services" },
     { "label": "Work", "href": "/work" },
     { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/#contact"}
-  ]
+  ],
+  "uiContent": {
+    "common": {
+      "buttons": {
+        "getInTouch": "Get in Touch",
+        "getStarted": "Get Started",
+        "viewAllServices": "View All Services",
+        "scheduleCall": "Schedule a Call",
+        "sendMessage": "Send Message",
+        "sending": "Sending..."
+      },
+      "placeholders": {
+        "chooseService": "Choose a service"
+      }
+    },
+    "pseo": {
+      "titles": {
+        "features": "What We Offer",
+        "faq": "Frequently Asked Questions",
+        "linking": "Explore More",
+        "areas": "Our Areas in India",
+        "industries": "Industries We Serve",
+        "challenges": "Common Challenges We Solve",
+        "cta": "Ready to grow your business in {eyebrow}?",
+        "company": "Company",
+        "resources": "Resources"
+      },
+      "labels": {
+        "agency": "Agency",
+        "critical": "Why {service} is Critical for {location}"
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "heading": "Let’s start the conversation",
+      "subheading": "Tell us about your goals and we’ll get back to you shortly.",
+      "success": "Message sent successfully. We’ll contact you soon.",
+      "error": "Something went wrong. Please try again.",
+      "fields": {
+        "name": "Name *",
+        "email": "Email *",
+        "service": "Select Service *",
+        "message": "Message"
+      }
+    }
+  }
 }

@@ -1,0 +1,116 @@
+{
+  "industries": [
+    {
+      "slug": "real-estate",
+      "name": "Real Estate",
+      "pain_points": [
+        "Low quality lead generation",
+        "Lack of trust and authority",
+        "Inconsistent property showcasing"
+      ],
+      "solutions": [
+        "Local SEO to dominate property searches",
+        "WhatsApp automation for instant inquiries",
+        "Professional property shoots and virtual tours"
+      ]
+    },
+    {
+      "slug": "healthcare",
+      "name": "Healthcare & Clinics",
+      "pain_points": [
+        "Difficulty in booking appointments",
+        "Low online visibility for local clinics",
+        "Managing patient reviews and reputation"
+      ],
+      "solutions": [
+        "Google Business Profile optimization",
+        "Local lead campaigns for specialized services",
+        "Online reputation management (ORM)"
+      ]
+    },
+    {
+      "slug": "education",
+      "name": "Education & Coaching",
+      "pain_points": [
+        "High competition in Kakadeo coaching hub",
+        "Ineffective student outreach",
+        "Lack of brand storytelling"
+      ],
+      "solutions": [
+        "Short-form video content (Reels/Shorts)",
+        "Social media community management",
+        "Conversion-focused landing pages"
+      ]
+    },
+    {
+      "slug": "e-commerce",
+      "name": "E-commerce & Retail",
+      "pain_points": [
+        "High cart abandonment",
+        "Low brand awareness in Kanpur market",
+        "Inefficient ad spend"
+      ],
+      "solutions": [
+        "Performance marketing (Meta & Google Ads)",
+        "Sales funnel optimization",
+        "Influencer marketing with local creators"
+      ]
+    },
+    {
+      "slug": "hospitality",
+      "name": "Restaurants & Hospitality",
+      "pain_points": [
+        "Low weekend footfall",
+        "Poor online discovery in local maps",
+        "High competition from food apps"
+      ],
+      "solutions": [
+        "Instagram marketing with food styling shoots",
+        "Google Maps ranking for 'restaurants near me'",
+        "WhatsApp CRM for loyalty programs"
+      ]
+    },
+    {
+      "slug": "fitness",
+      "name": "Gyms & Fitness Centers",
+      "pain_points": [
+        "High member churn rate",
+        "Low trial-to-membership conversion",
+        "Difficulty in reaching local enthusiasts"
+      ],
+      "solutions": [
+        "Lead generation ads for trial sessions",
+        "Short-form video shoots of gym atmosphere",
+        "Local SEO to dominate 'gym in Kanpur' searches"
+      ]
+    },
+    {
+      "slug": "logistics",
+      "name": "Logistics & Transport",
+      "pain_points": [
+        "Inconsistent lead flow for B2B",
+        "Lack of professional online appearance",
+        "Manual inquiry management"
+      ],
+      "solutions": [
+        "Corporate branding and website development",
+        "LinkedIn marketing for B2B outreach",
+        "Automated lead capture and follow-up systems"
+      ]
+    },
+    {
+      "slug": "jewelry",
+      "name": "Luxury Retail & Jewelry",
+      "pain_points": [
+        "Difficulty in building high-ticket trust",
+        "Low digital engagement for offline stores",
+        "Competition from national chains"
+      ],
+      "solutions": [
+        "High-end visual production (Brand Shoots)",
+        "PR and thought leadership for founders",
+        "Influencer collaborations with local elite"
+      ]
+    }
+  ]
+}

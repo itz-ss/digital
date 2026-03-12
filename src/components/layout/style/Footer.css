@@ -84,6 +84,11 @@
   color: var(--accent-support); /* Soft Mint */
 }
 
+.footer-logo-img{
+  background-color: #ffffff7c;
+  border-radius: 32px;
+}
+
 /* ===============================
    Bottom
 ================================ */

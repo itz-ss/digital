@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import servicesData from "@/data/services.json";
+import siteData from "@/data/site.json";
 import Button from "../UI/Button";
 import "./style/ContactForm.css";
 
@@ -60,16 +61,16 @@ export default function ContactForm() {
       <div className="contact-container">
 
         <header className="contact-header">
-          <span className="contact-eyebrow">Contact</span>
-          <h2>Let’s start the conversation</h2>
-          <p>Tell us about your goals and we’ll get back to you shortly.</p>
+          <span className="contact-eyebrow">{siteData.uiContent.contact.eyebrow}</span>
+          <h2>{siteData.uiContent.contact.heading}</h2>
+          <p>{siteData.uiContent.contact.subheading}</p>
         </header>
 
         <form className="contact-form" onSubmit={handleSubmit}>
 
           {/* Name */}
           <div className="form-field">
-            <label>Name *</label>
+            <label>{siteData.uiContent.contact.fields.name}</label>
             <input
               type="text"
               name="name"
@@ -81,7 +82,7 @@ export default function ContactForm() {
 
           {/* Email */}
           <div className="form-field">
-            <label>Email *</label>
+            <label>{siteData.uiContent.contact.fields.email}</label>
             <input
               type="email"
               name="email"
@@ -93,14 +94,14 @@ export default function ContactForm() {
 
           {/* Service Dropdown */}
           <div className="form-field full">
-            <label>Select Service *</label>
+            <label>{siteData.uiContent.contact.fields.service}</label>
             <select
               name="service"
               required
               value={formData.service}
               onChange={handleChange}
             >
-              <option value="">Choose a service</option>
+              <option value="">{siteData.uiContent.common.placeholders.chooseService}</option>
               {servicesData.tabs.map((service) => (
                 <option key={service.id} value={service.title}>
                   {service.title}
@@ -111,7 +112,7 @@ export default function ContactForm() {
 
           {/* Message */}
           <div className="form-field full">
-            <label>Message</label>
+            <label>{siteData.uiContent.contact.fields.message}</label>
             <textarea
               name="message"
               rows="4"
@@ -126,18 +127,18 @@ export default function ContactForm() {
             disabled={loading}
             variant="secondary"
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? siteData.uiContent.common.buttons.sending : siteData.uiContent.common.buttons.sendMessage}
           </Button>
 
           {status === "success" && (
             <p className="form-success">
-              Message sent successfully. We’ll contact you soon.
+              {siteData.uiContent.contact.success}
             </p>
           )}
 
           {status === "error" && (
             <p className="form-error">
-              Something went wrong. Please try again.
+              {siteData.uiContent.contact.error}
             </p>
           )}
 
