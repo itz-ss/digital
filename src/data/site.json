@@ -11,7 +11,10 @@
   "city": "Kanpur",
   "state": "Uttar Pradesh",
   "country": "India",
-  "baseUrl": "https://digitalgram.com",
+  "baseUrl": "https://www.thedigitalgram.in",
+  "verification": {
+    "google": "YOUR_GOOGLE_VERIFICATION_TOKEN_HERE"
+  },
   "navigation": [
     { "label": "Home", "href": "/" },
     { "label": "Services", "href": "/services" },

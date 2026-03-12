@@ -10,7 +10,7 @@ const orgSchema = generateOrganizationSchema();
 export const metadata = {
   metadataBase: new URL(siteData.baseUrl),
   title: {
-    default: `${siteData.name} | Best Digital Marketing Agency in ${siteData.city}`,
+    default: `${siteData.name} | Digital Marketing Agency in ${siteData.city}`,
     template: `%s | ${siteData.name}`
   },
   description: `${siteData.name} is the leading digital marketing agency in ${siteData.city}, specializing in SEO, Social Media, and Performance Marketing for growth-focused businesses.`,
@@ -22,6 +22,9 @@ export const metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  verification: {
+    google: siteData.verification?.google,
   },
     openGraph: {
     title: `${siteData.name} | Best Digital Marketing Agency in ${siteData.city}`,

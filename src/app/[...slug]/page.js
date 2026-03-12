@@ -13,6 +13,7 @@ import {
   generateServiceSchema 
 } from "@/utils/schema_markup";
 import faqsData from "@/data/faqs.json";
+import siteData from "@/data/site.json";
 
 export async function generateStaticParams() {
   const paths = [];
@@ -72,12 +73,12 @@ export async function generateMetadata({ params }) {
         title,
         description,
         alternates: {
-          canonical: `https://digitalgram.com/${path}`,
+          canonical: `${siteData.baseUrl}/${path}`,
         },
         openGraph: {
           title,
           description,
-          url: `https://digitalgram.com/${path}`,
+          url: `${siteData.baseUrl}/${path}`,
           images: [`/service/${service.id}.jpg`],
         }
       };
@@ -101,7 +102,7 @@ export async function generateMetadata({ params }) {
         title,
         description,
         alternates: {
-          canonical: `https://digitalgram.com/${path}`,
+          canonical: `${siteData.baseUrl}/${path}`,
         }
       };
     }
