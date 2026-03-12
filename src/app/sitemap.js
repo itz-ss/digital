@@ -50,5 +50,28 @@ export default function sitemap() {
     });
   });
 
-  return [...staticPages, ...blogPages, ...slPages, ...siPages];
+  // National Service Pages
+  const nationalPages = servicesData.tabs.map(service => ({
+    url: `${baseUrl}/best-${service.id}-agency-in-india`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }));
+
+  // Individual Service Detail Pages
+  const serviceDetailPages = servicesData.tabs.map(service => ({
+    url: `${baseUrl}/services/${service.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  return [
+    ...staticPages, 
+    ...blogPages, 
+    ...serviceDetailPages, 
+    ...nationalPages, 
+    ...slPages, 
+    ...siPages
+  ];
 }

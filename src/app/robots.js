@@ -1,3 +1,5 @@
+import siteData from "@/data/site.json";
+
 export default function robots() {
   return {
     rules: {
@@ -5,6 +7,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://digitalgram.com/sitemap.xml',
+    sitemap: `${siteData.baseUrl}/sitemap.xml`,
   }
 }

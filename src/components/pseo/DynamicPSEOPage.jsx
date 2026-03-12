@@ -9,6 +9,7 @@ import siteData from "@/data/site.json";
 import locationsData from "@/data/locations.json";
 import faqsData from "@/data/faqs.json";
 import industriesData from "@/data/industries.json";
+import contactData from "@/data/contact.json";
 
 export default function DynamicPSEOPage({ type, data }) {
   const { service, location, industry } = data;
