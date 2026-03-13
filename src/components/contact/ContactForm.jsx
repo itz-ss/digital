@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import servicesData from "@/data/services.json";
+import contactData from "@/data/contact.json";
 import siteData from "@/data/site.json";
 import Button from "../UI/Button";
 import "./style/ContactForm.css";
@@ -25,21 +26,24 @@ export default function ContactForm() {
     });
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (!res.ok) throw new Error("Failed");
+      // Construct WhatsApp Message
+      const whatsappNumber = contactData.contactInfo.whatsapp.value.replace(/\D/g, '');
+      const text = `*New Lead from Website*%0A%0A` +
+                   `*Name:* ${formData.name}%0A` +
+                   `*Email:* ${formData.email}%0A` +
+                   `*Service:* ${formData.service}%0A` +
+                   `*Message:* ${formData.message || "No message provided"}`;
+      
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+      
+      // Redirect to WhatsApp
+      window.open(whatsappUrl, "_blank");
 
       setStatus("success");
       setFormData({
@@ -50,6 +54,7 @@ export default function ContactForm() {
       });
 
     } catch (error) {
+      console.error("WhatsApp Redirection Error:", error);
       setStatus("error");
     } finally {
       setLoading(false);
