@@ -6,6 +6,9 @@ import blogsData from "@/data/blogs.json";
 import seoData from "@/data/seo.json";
 import DynamicPSEOPage from "@/components/pseo/DynamicPSEOPage";
 import BlogTemplate from "@/components/blog/BlogTemplate";
+import LegalTemplate from "@/components/legal/LegalTemplate";
+import FAQTemplate from "@/components/faq/FAQTemplate";
+import legalData from "@/data/legal.json";
 import { 
   generateLocalBusinessSchema, 
   generateFAQSchema, 
@@ -42,6 +45,11 @@ export async function generateStaticParams() {
   servicesData.tabs.forEach(service => {
     paths.push({ slug: [`best-${service.id}-agency-in-india`] });
   });
+
+  // 5. Legal & FAQ Paths
+  paths.push({ slug: ["privacy-policy"] });
+  paths.push({ slug: ["terms"] });
+  paths.push({ slug: ["faq"] });
 
   return paths;
 }
@@ -169,6 +177,17 @@ export default async function Page({ params }) {
         <BlogTemplate blog={blog} />
       </>
     );
+  }
+
+  // 1.1 Legal Pages
+  if (slug.length === 1) {
+    if (slug[0] === "privacy-policy" || slug[0] === "terms") {
+      const data = slug[0] === "privacy-policy" ? legalData["privacy-policy"] : legalData["terms"];
+      return <LegalTemplate data={data} />;
+    }
+    if (slug[0] === "faq") {
+      return <FAQTemplate faqs={faqsData} />;
+    }
   }
 
   // 2. Service-Location Pages

@@ -19,6 +19,21 @@
       "path": "/work",
       "type": "static",
       "template": "work"
+    },
+    {
+      "path": "/privacy-policy",
+      "type": "static",
+      "template": "legal"
+    },
+    {
+      "path": "/terms",
+      "type": "static",
+      "template": "legal"
+    },
+    {
+      "path": "/faq",
+      "type": "static",
+      "template": "faq"
     }
   ]
 }

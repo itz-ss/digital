@@ -1,0 +1,54 @@
+{
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "March 13, 2026",
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "At DigitalGram, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or use our services."
+      },
+      {
+        "heading": "Information We Collect",
+        "content": "We may collect personal information such as your name, email address, phone number, and business details when you fill out forms on our website or contact us directly."
+      },
+      {
+        "heading": "How We Use Your Information",
+        "content": "We use the information we collect to provide and improve our services, communicate with you about your projects, and send you relevant marketing updates if you have opted in."
+      },
+      {
+        "heading": "Data Security",
+        "content": "We implement industry-standard security measures to protect your data from unauthorized access, disclosure, or alteration. However, no method of transmission over the internet is 100% secure."
+      },
+      {
+        "heading": "Contact Us",
+        "content": "If you have any questions about this Privacy Policy, please contact us at info@thedigitalgram.in."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "March 13, 2026",
+    "sections": [
+      {
+        "heading": "Acceptance of Terms",
+        "content": "By accessing and using the DigitalGram website, you agree to comply with and be bound by these Terms of Service. If you do not agree, please do not use our services."
+      },
+      {
+        "heading": "Scope of Services",
+        "content": "DigitalGram provides digital marketing, SEO, social media management, and web design services. The specific scope of work for each client is defined in a separate service agreement."
+      },
+      {
+        "heading": "User Obligations",
+        "content": "You agree to provide accurate information when contacting us and to use our website only for lawful purposes. You are responsible for any content you submit through our forms."
+      },
+      {
+        "heading": "Intellectual Property",
+        "content": "All content on this website, including text, graphics, logos, and code, is the property of DigitalGram and is protected by intellectual property laws. You may not use our content without prior written consent."
+      },
+      {
+        "heading": "Limitation of Liability",
+        "content": "DigitalGram shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or services."
+      }
+    ]
+  }
+}
