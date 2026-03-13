@@ -30,14 +30,13 @@ export default function DynamicPSEOPage({ type, data }) {
     eyebrow = "India";
   }
 
-  const faqs = faqsData.services[service.id] || [];
-  const localFaqs = faqsData.seo || [];
+  const faqs = faqsData.services?.[service.id] || [];
   const allFaqs = [...faqs, ...faqsData.general].slice(0, 4);
 
   return (
     <>
       <ServicesBackground />
-      <section className="pseo-page">
+      <section className={`pseo-page theme-${service.theme || 'blue'}`}>
         <div className="pseo-container">
           
           {/* ===== Hero Section ===== */}

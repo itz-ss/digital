@@ -1,38 +1,81 @@
 .pseo-page {
-  padding: 120px 24px;
+  padding: 120px 0;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Theme Color System */
+.theme-purple { --primary-color: #a855f7; --primary-rgb: 168, 85, 247; }
+.theme-pink { --primary-color: #ec4899; --primary-rgb: 236, 72, 153; }
+.theme-blue { --primary-color: #3b82f6; --primary-rgb: 59, 130, 246; }
+.theme-orange { --primary-color: #f97316; --primary-rgb: 249, 115, 22; }
+.theme-cyan { --primary-color: #06b6d4; --primary-rgb: 6, 182, 212; }
+.theme-gold { --primary-color: #eab308; --primary-rgb: 234, 179, 8; }
+.theme-red { --primary-color: #ef4444; --primary-rgb: 239, 68, 68; }
+.theme-emerald { --primary-color: #10b981; --primary-rgb: 16, 185, 129; }
+.theme-indigo { --primary-color: #6366f1; --primary-rgb: 99, 102, 241; }
+.theme-silver { --primary-color: #94a3b8; --primary-rgb: 148, 163, 184; }
+.theme-green { --primary-color: #22c55e; --primary-rgb: 34, 197, 94; }
+.theme-white { --primary-color: #ffffff; --primary-rgb: 255, 255, 255; }
 
 .pseo-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
+/* Hero Section Upgrade */
 .pseo-hero {
+  padding: 160px 0 100px;
   text-align: center;
-  margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.pseo-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(var(--primary-rgb, 59, 130, 246), 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .pseo-eyebrow {
   display: inline-block;
-  padding: 6px 16px;
-  background: rgba(var(--blue-rgb), 0.1);
-  color: var(--blue-primary);
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
   border-radius: 100px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   margin-bottom: 24px;
+  backdrop-filter: blur(10px);
 }
 
 .pseo-title {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 24px;
-  background: linear-gradient(to bottom, var(--text-primary), var(--text-secondary));
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 30px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-color), #818cf8);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -40,119 +83,213 @@
 
 .pseo-description {
   font-size: 1.25rem;
-  color: var(--text-secondary);
-  max-width: 700px;
-  margin: 0 auto 40px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 800px;
+  margin: 0 auto 50px;
   line-height: 1.6;
 }
 
 .pseo-cta-group {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Main Content Polish */
 .pseo-main-content {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: center;
   margin-bottom: 120px;
+  padding: 80px 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
 }
 
 .pseo-text h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
   margin-bottom: 24px;
+  line-height: 1.2;
 }
 
 .pseo-text p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+}
+
+.pseo-pain-points {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(var(--primary-rgb), 0.05);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+.pseo-pain-points h3 {
+  font-size: 1.25rem;
+  color: #fff;
   margin-bottom: 20px;
 }
 
-.pseo-image {
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  width: 100%;
-  height: auto;
+.pseo-pain-points ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+.pseo-pain-points li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pseo-pain-points li::before {
+  content: '→';
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.pseo-image {
+  border-radius: 30px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+  filter: saturate(1.1);
+  transition: transform 0.5s ease;
+}
+
+.pseo-visual:hover .pseo-image {
+  transform: scale(1.02);
+}
+
+/* Features Grid Upgrade */
 .pseo-features {
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  color: #fff;
+  letter-spacing: -0.02em;
 }
 
 .pseo-features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
 }
 
 .feature-card {
-  padding: 32px;
-  background: var(--bg-secondary);
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--blue-primary);
-  box-shadow: 0 10px 30px rgba(var(--blue-rgb), 0.1);
-}
-
-.pseo-faq {
-  margin-bottom: 120px;
-}
-
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.faq-item h4 {
-  font-size: 1.25rem;
-  margin-bottom: 12px;
-  color: var(--text-primary);
-}
-
-.faq-item p {
-  line-height: 1.6;
-  color: var(--text-secondary);
-}
-
-.pseo-footer {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
 }
 
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary-color);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0 10px rgba(var(--primary-rgb), 0.3));
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* FAQ Upgrade */
+.pseo-faq {
+  margin-bottom: 150px;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.faq-item {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-item h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.faq-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Internal Linking Glow Ups */
 .pseo-linking {
-  margin-bottom: 120px;
-  padding: 80px 40px;
-  background: var(--bg-secondary);
-  border-radius: 40px;
+  margin-bottom: 150px;
+  padding: 100px 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
 }
 
 .linking-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 100px;
 }
 
 .linking-group h3 {
-  font-size: 1.5rem;
-  margin-bottom: 24px;
-  color: var(--text-primary);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.linking-group h3::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
 }
 
 .linking-group ul {
@@ -160,46 +297,93 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 .linking-group a {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  font-size: 1.05rem;
-  transition: color 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+  display: inline-block;
 }
 
 .linking-group a:hover {
-  color: var(--blue-primary);
+  color: var(--primary-color);
+  transform: translateX(10px);
+}
+
+/* Footer CTA Polish */
+.pseo-footer {
+  text-align: center;
 }
 
 .footer-cta-card {
-  padding: 80px 40px;
-  background: linear-gradient(135deg, var(--blue-primary), #4f46e5);
-  border-radius: 40px;
+  padding: 120px 40px;
+  background: linear-gradient(135deg, var(--primary-color), #4f46e5);
+  border-radius: 50px;
   color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(var(--primary-rgb), 0.3);
+}
+
+.footer-cta-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  z-index: 1;
 }
 
 .footer-cta-card h3 {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.03em;
 }
 
 .footer-cta-card p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
+  font-size: 1.3rem;
+  margin-bottom: 50px;
   opacity: 0.9;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-cta-card .btn-primary {
   background: white;
-  color: var(--blue-primary);
+  color: var(--primary-color);
+  font-weight: 700;
+  padding: 18px 45px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .pseo-main-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 60px 30px;
+  }
+  .linking-grid {
+    gap: 50px;
+  }
 }
 
 @media (max-width: 768px) {
-  .pseo-main-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+  .pseo-page { padding: 100px 0; }
+  .pseo-hero { padding: 100px 0 60px; }
+  .pseo-main-content { border-radius: 0; border: none; background: transparent; padding: 40px 20px; }
+  .pseo-linking { padding: 60px 20px; border-radius: 0; }
+  .linking-grid { grid-template-columns: 1fr; }
+  .footer-cta-card { border-radius: 0; }
 }
