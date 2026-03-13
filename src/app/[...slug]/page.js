@@ -140,9 +140,43 @@ export async function generateMetadata({ params }) {
     const service = servicesData.tabs.find(s => s.id === serviceSlug);
     if (service) {
       const template = seoData.templates.service_india;
+      const title = template.title.replace(/{service}/g, service.label);
+      const description = template.description.replace(/{service}/g, service.label);
       return {
-        title: template.title.replace(/{service}/g, service.label),
-        description: template.description.replace(/{service}/g, service.label)
+        title,
+        description,
+        alternates: {
+          canonical: `${siteData.baseUrl}/${path}`,
+        },
+        openGraph: {
+          title,
+          description,
+          url: `${siteData.baseUrl}/${path}`,
+        }
+      };
+    }
+  }
+
+  // Handle Legal & FAQ Pages
+  if (slug.length === 1) {
+    if (slug[0] === "privacy-policy" || slug[0] === "terms" || slug[0] === "faq") {
+      const titles = {
+        "privacy-policy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "faq": "Frequently Asked Questions"
+      };
+      const descriptions = {
+        "privacy-policy": `Read the Privacy Policy of ${siteData.name}. Learn how we handle and protect your data.`,
+        "terms": `Read the Terms of Service for ${siteData.name}. Understand the rules and guidelines for using our services.`,
+        "faq": `Find answers to common questions about ${siteData.name}, our digital marketing services, and how we work with clients in ${siteData.city}.`
+      };
+
+      return {
+        title: titles[slug[0]],
+        description: descriptions[slug[0]],
+        alternates: {
+          canonical: `${siteData.baseUrl}/${slug[0]}`,
+        }
       };
     }
   }
