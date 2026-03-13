@@ -10,7 +10,8 @@ import {
   generateLocalBusinessSchema, 
   generateFAQSchema, 
   generateBreadcrumbSchema, 
-  generateServiceSchema 
+  generateServiceSchema,
+  generateArticleSchema
 } from "@/utils/schema_markup";
 import faqsData from "@/data/faqs.json";
 import siteData from "@/data/site.json";
@@ -53,7 +54,23 @@ export async function generateMetadata({ params }) {
   // Handle Blog
   if (slug[0] === "blog" && slug[1]) {
     const blog = blogsData.blogs.find(b => b.slug === slug[1]);
-    if (blog) return { title: blog.title, description: blog.excerpt };
+    if (blog) {
+      return {
+        title: blog.title,
+        description: blog.excerpt,
+        alternates: {
+          canonical: `${siteData.baseUrl}/${path}`,
+        },
+        openGraph: {
+          title: blog.title,
+          description: blog.excerpt,
+          url: `${siteData.baseUrl}/${path}`,
+          type: 'article',
+          publishedTime: blog.date,
+          authors: [blog.author],
+        }
+      };
+    }
   }
 
   // Handle Service-Location Pattern: {service}-services-{location}
@@ -133,7 +150,25 @@ export default async function Page({ params }) {
   if (slug[0] === "blog" && slug[1]) {
     const blog = blogsData.blogs.find(b => b.slug === slug[1]);
     if (!blog) notFound();
-    return <BlogTemplate blog={blog} />;
+
+    const schemas = [
+      generateArticleSchema(blog),
+      generateBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+        { name: blog.title, path: `/blog/${blog.slug}` }
+      ])
+    ];
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+        />
+        <BlogTemplate blog={blog} />
+      </>
+    );
   }
 
   // 2. Service-Location Pages

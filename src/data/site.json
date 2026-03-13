@@ -65,6 +65,22 @@
         "service": "Select Service *",
         "message": "Message"
       }
+    },
+    "blog": {
+      "labels": {
+        "minRead": "min read",
+        "keyTakeaways": "Key Takeaways",
+        "weeklyHighlights": "Weekly Highlights",
+        "previousArticle": "Previous Article",
+        "nextArticle": "Next Article",
+        "backToBlog": "Back to Blog",
+        "ctaHeading": "Boost Your Business with {name}"
+      },
+      "defaultTakeaways": [
+        "Focus on local relevance for {city} audiences.",
+        "Optimize for both users and search engines.",
+        "Leverage social media to amplify your reach."
+      ]
     }
   }
 }

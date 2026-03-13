@@ -3,6 +3,7 @@ import HomeServices from "./pages/HomeServices";
 import HowWeWorkTimeline from "./pages/HowWeWork";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import Testimonials from "./pages/Testimonials";
+import BlogHighlights from "./pages/BlogHighlights";
 import ContactCTA from "./pages/ContactCTA";
 import AnimatedBackground from '../backgroundAnimation/AnimatedBackground';
 // import "./style/home.css";
@@ -20,6 +21,7 @@ export default function Home() {
         <WhoWeWorkWith />
       </section>
       <Testimonials />
+      <BlogHighlights />
       <section id="contact">
         <ContactCTA />
       </section>

@@ -98,3 +98,31 @@ export function generateServiceSchema({ service, location }) {
     }
   };
 }
+
+export function generateArticleSchema(blog) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": blog.title,
+    "description": blog.excerpt,
+    "author": {
+      "@type": "Organization",
+      "name": siteData.name,
+      "url": siteData.baseUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteData.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteData.baseUrl}/logo/android-chrome-512x512.png`
+      }
+    },
+    "datePublished": blog.date,
+    "url": `${siteData.baseUrl}/blog/${blog.slug}`,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${siteData.baseUrl}/blog/${blog.slug}`
+    }
+  };
+}

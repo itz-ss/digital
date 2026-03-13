@@ -1,0 +1,153 @@
+.blog-highlights {
+  padding: 100px 0;
+  background: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-highlights .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.highlights-grid-container {
+  overflow-x: auto;
+  padding: 0 20px 40px;
+  margin: 0 -20px;
+  scrollbar-width: none;
+}
+
+.highlights-grid-container::-webkit-scrollbar {
+  display: none;
+}
+
+.highlights-grid {
+  display: flex;
+  gap: 30px;
+  min-width: max-content;
+}
+
+.highlight-card {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-category {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-color);
+  background: rgba(var(--primary-rgb), 0.1);
+  padding: 5px 12px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.card-excerpt {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 25px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.read-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.highlights-footer {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: auto;
+  }
+  
+  .highlight-card {
+    width: auto;
+  }
+
+  .highlights-grid-container {
+    overflow: visible;
+    margin: 0;
+    padding: 0 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
