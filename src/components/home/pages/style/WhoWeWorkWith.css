@@ -1,11 +1,11 @@
 /* ===============================
-   Who We Work With (Desktop default)
+   JARVIS MODULE: ANALYSIS
 ================================ */
 
 .who-we-work-with {
-  padding: 96px 24px;
-  color: var(--text-primary);
-  border-radius: 0 0 32px 32px;
+  padding: 120px 24px;
+  background-color: var(--bg-secondary);
+  position: relative;
 }
 
 .who-we-work-with-container {
@@ -14,184 +14,142 @@
 }
 
 /* ===============================
-   Header
+   ANALYSIS HEADER
 ================================ */
 
 .who-we-work-with-header {
-  max-width: 720px;
-  margin-bottom: 64px;
+  max-width: 100%;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.section-module {
+  display: block;
+  margin-bottom: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--primary-accent);
 }
 
 .section-title {
-  margin: 0 0 12px 0;
-  font-size: 2.6rem;
-  line-height: 1.15;
+  margin: 0 0 24px 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--text-heading);
+  font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
 }
 
 .section-subtitle {
-  margin: 0 0 16px 0;
-  font-size: 1.05rem;
-  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-accent);
+  opacity: 0.8;
 }
 
 .section-description {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-tertiary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
 }
 
 /* ===============================
-   Grid
+   SURVEILLANCE GRID
 ================================ */
 
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
-/* ===============================
-   Card
-================================ */
-
-
-/* Bottom-to-up glow animation on hover */
-.industry-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
+.industry-card {
+  text-align: left;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
 }
 
-.industry-card:hover::before {
-  animation: glow-up 0.8s ease-out forwards;
+.industry-card:hover {
+  transform: scale(1.02);
+  border-color: var(--primary-accent);
+  box-shadow: var(--glow-cyan);
 }
 
-/* Top-to-down glow animation on hover-out */
-.industry-card:not(:hover)::before {
-  animation: glow-down 0.8s ease-out forwards;
+.industry-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 32px;
 }
 
-/* Icon */
 .industry-icon {
-  display: block;
-  margin-bottom: 16px;
-  font-size: 1.6rem;
-  color: var(--text-primary);
-  opacity: 0.9;
+  font-size: 2rem;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px rgba(var(--primary-accent-rgb), 0.3));
 }
 
-/* Text */
+.icon-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed var(--primary-accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: rotate-hud 20s linear infinite;
+}
+
+@keyframes rotate-hud {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .industry-title {
-  margin: 0 0 8px 0;
-  font-size: 1.1rem;
-  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .industry-description {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-secondary);
+  flex-grow: 1;
+}
+
+.card-status {
+  font-size: 0.55rem;
+  color: var(--primary-accent);
+  opacity: 0.4;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 /* ===============================
-   Tablet ≤1024px
+   RESPONSIVE
 ================================ */
 
-@media (max-width: 1024px) {
-  .who-we-work-with {
-    padding: 88px 20px;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
+@media (max-width: 1200px) {
   .industries-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
   }
 }
-
-/* ===============================
-   Mobile ≤768px
-================================ */
 
 @media (max-width: 768px) {
   .who-we-work-with {
-    padding: 72px 20px;
-  }
-
-  .who-we-work-with-header {
-    margin-bottom: 48px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
+    padding: 80px 24px;
   }
 
   .industries-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
-
-/* ===============================
-   Small Mobile ≤480px (CRITICAL)
-================================ */
-
-@media (max-width: 480px) {
-  .who-we-work-with {
-    padding: 56px 16px;
-  }
-
-  .who-we-work-with-header {
-    margin-bottom: 40px;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .section-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .section-description {
-    font-size: 0.9rem;
-  }
-
-  .industry-card {
-    padding: 22px;
-  }
-
-  .industry-icon {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
-
-  .industry-title {
-    font-size: 1rem;
-  }
-
-  .industry-description {
-    font-size: 0.85rem;
+    gap: 32px;
   }
 }

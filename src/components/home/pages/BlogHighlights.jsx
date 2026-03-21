@@ -36,9 +36,9 @@ export default function BlogHighlights() {
       <div className="container">
         <RevealWrapper direction="up" delay={100}>
           <div className="section-header">
-            <span className="eyebrow">{siteData.uiContent.common.buttons.viewAllServices}</span>
-            <h2 className="section-title">Weekly <span className="gradient-text">Highlights</span></h2>
-            <p className="section-subtitle">Stay updated with the latest digital marketing trends and strategies from DigitalGram.</p>
+            <span className="text-mono section-module">Module // 05 INTELLIGENCE</span>
+            <h2 className="section-title">Latest <span className="gradient-text">Insights Feed</span></h2>
+            <p className="section-subtitle text-mono">STREAMS FROM DIGITAL LABORATORIES // ANALYTICS & TRENDS</p>
           </div>
         </RevealWrapper>
 
@@ -48,12 +48,12 @@ export default function BlogHighlights() {
               <RevealWrapper key={blog.slug} direction="up" delay={200 * (index + 1)}>
                 <Link href={`/blog/${blog.slug}`} className="highlight-card">
                   <div className="card-content">
-                    <span className="card-category">{blog.category}</span>
+                    <span className="text-mono card-category">SOURCE_{blog.category.toUpperCase().replace(/\s+/g, '_')}</span>
                     <h3 className="card-title">{blog.title}</h3>
                     <p className="card-excerpt">{blog.excerpt}</p>
                     <div className="card-footer">
-                      <span className="card-date">{blog.date}</span>
-                      <span className="read-more">Read Article →</span>
+                      <span className="text-mono card-date">DECODED_{blog.date.replace(/\s+/g, '_').toUpperCase()}</span>
+                      <span className="read-more text-mono">OPEN_ENTRY →</span>
                     </div>
                   </div>
                 </Link>

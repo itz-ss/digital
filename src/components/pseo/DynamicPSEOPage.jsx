@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import RevealWrapper from "../UI/RevealWrapper";
-import ServicesBackground from "@/components/backgroundAnimation/ServicesBackground";
 import siteData from "@/data/site.json";
 import locationsData from "@/data/locations.json";
 import faqsData from "@/data/faqs.json";
@@ -36,7 +35,6 @@ export default function DynamicPSEOPage({ type, data }) {
 
   return (
     <>
-      <ServicesBackground />
       <section className={`pseo-page theme-${service.theme || 'blue'}`}>
         <div className="pseo-container">
           

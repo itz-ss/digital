@@ -8,8 +8,18 @@ import ContactForm from "@/components/contact/ContactForm";
 import "./style/Navbar.css";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
+
+  // Scroll Detection for Navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Lock body scroll when modal open
   useEffect(() => {
@@ -18,15 +28,15 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="navbar">
+      <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
 
           {/* Logo */}
           <Link href="/" className="navbar-logo">
             {siteData.logo?.header ? (
-              <img 
-                src={siteData.logo.header} 
-                alt={siteData.logo.alt || siteData.name} 
+              <img
+                src={siteData.logo.header}
+                alt={siteData.logo.alt || siteData.name}
                 className="nav-logo-img"
               />
             ) : (
@@ -47,9 +57,9 @@ export default function Navbar() {
             ))}
 
             {/* Mobile CTA inside dropdown */}
-            <div className="mobile-cta">
+            <div className="mobile-cta-container">
               <Button
-                className="navbar-cta"
+                className="navbar-cta w-full"
                 onClick={() => {
                   setMenuOpen(false);
                   setContactModalOpen(true);

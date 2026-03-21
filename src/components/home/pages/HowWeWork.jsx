@@ -11,8 +11,8 @@ export default function HowWeWorkTimeline() {
         {/* Header */}
         <header className="how-we-work-header">
           <RevealWrapper direction="up">  
-             <span className="how-we-work-eyebrow">
-            {howWeWorkData.title}
+             <span className="text-mono how-we-work-eyebrow">
+            Protocol // {howWeWorkData.title}
            </span>
           </RevealWrapper>
           <RevealWrapper direction="up" delay={120}>  
@@ -21,7 +21,7 @@ export default function HowWeWorkTimeline() {
           </h2>
           </RevealWrapper>
           <RevealWrapper direction="up" delay={240}>  
-          <p className="how-we-work-description">
+          <p className="how-we-work-description text-mono">
             {howWeWorkData.description}
           </p>
           </RevealWrapper>
@@ -30,23 +30,26 @@ export default function HowWeWorkTimeline() {
         {/* Timeline */}
         <div className="how-we-work-timeline">
           <div className="how-we-work-line" />
-          <RevealWrapper direction="up" delay={240}>  
+          
           {howWeWorkData.steps.map((step, index) => (
             <div key={step.id} className="how-we-work-step">
-              <span className="step-index">
-                {String(index + 1).padStart(2, "0")}
+              <span className="text-mono phase-tag">
+                PHASE_{String(index + 1).padStart(2, "0")}
               </span>
 
               <div className="step-dot" />
-              <Card variant="blue-accent">  
-              <div className="step-content">
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
-              </div>
+              <RevealWrapper direction="up" delay={240}>  
+              <Card variant="secondary" className="step-card">  
+                <div className="step-content">
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-description">{step.description}</p>
+                  <div className="execution-stat text-mono">STATUS: OPTIMIZED</div>
+                </div>
               </Card>
+              </RevealWrapper>
             </div>
           ))}
-          </RevealWrapper>
+          
         </div>
 
       </div>

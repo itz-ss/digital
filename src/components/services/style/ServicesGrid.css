@@ -1,11 +1,10 @@
 /* ===============================
-   Services Grid Page (Desktop default)
+   Services Grid Page (Premium Agency)
 ================================ */
 
 .services-grid {
-  padding: 96px 24px;
-  background-color: var(--bg-primary);
-  overflow-x: hidden;
+  padding: 100px 24px;
+  background-color: transparent;
 }
 
 .services-grid-container {
@@ -18,33 +17,33 @@
 ================================ */
 
 .services-grid-header {
-  max-width: 720px;
-  margin-bottom: 56px;
+  max-width: 800px;
+  margin-bottom: 64px;
 }
 
 .services-eyebrow {
   display: block;
-  margin-bottom: 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--primary-red);
+  letter-spacing: 0.1em;
 }
 
 .services-grid-title {
   margin: 0 0 16px 0;
-  font-size: 3rem;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--text-heading);
+  font-weight: 800;
 }
 
 .services-grid-intro {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: var(--text-secondary);
+  max-width: 700px;
 }
 
 /* ===============================
@@ -58,163 +57,65 @@
 }
 
 /* ===============================
-   Card
+   Card Overrides
 ================================ */
 
 .services-grid-card {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Bottom-to-up glow animation on hover */
-.services-grid-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.services-grid-card:hover::before {
-  animation: glow-up 0.8s ease-out forwards;
-}
-
-/* Top-to-down glow animation on hover-out */
-.services-grid-card:not(:hover)::before {
-  animation: glow-down 0.8s ease-out forwards;
-}
-
-.services-grid-card:hover {
-  background: linear-gradient(135deg, hsla(0, 0%, 12%, 0.7) 0%, hsla(0, 0%, 10%, 0.6) 100%);
-  box-shadow:
-    0 12px 48px rgba(0, 0, 0, 0.5),
-    0 0 24px hsla(0, 85%, 60%, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  transform: translateY(-4px);
-  border-color: hsla(0, 85%, 60%, 0.3);
-}
-
-.services-grid-card:hover::after {
-  opacity: 1;
 }
 
 .card-title {
-  margin: 0 0 12px 0;
-  font-size: 1.15rem;
-  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-heading);
 }
 
 .card-description {
-  margin: 0 0 24px 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  margin: 0 0 32px 0;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--text-secondary);
+  flex-grow: 1;
 }
 
 .card-link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  text-decoration: underline;
-  text-decoration-color: var(--text-muted);
-  text-underline-offset: 4px;
-  transition: all 200ms ease;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-red);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
 }
 
 .card-link:hover {
-  color: var(--text-primary);
-  text-decoration-color: var(--accent-primary);
+  gap: 8px;
 }
 
 /* ===============================
-   Tablet ≤1024px
+   Responsive
 ================================ */
 
 @media (max-width: 1024px) {
-  .services-grid {
-    padding: 88px 20px;
-  }
-
-  .services-grid-title {
-    font-size: 2.6rem;
-  }
-
   .services-grid-cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
   }
 }
 
-/* ===============================
-   Mobile ≤768px
-================================ */
-
 @media (max-width: 768px) {
   .services-grid {
-    padding: 72px 20px;
-  }
-
-  .services-grid-header {
-    margin-bottom: 48px;
+    padding: 80px 20px;
   }
 
   .services-grid-title {
-    font-size: 2.2rem;
-  }
-
-  .services-grid-intro {
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
 
   .services-grid-cards {
     grid-template-columns: 1fr;
-    gap: 24px;
   }
-}
-
-/* ===============================
-   Small Mobile ≤480px (CRITICAL)
-================================ */
-
-@media (max-width: 480px) {
-  .services-grid {
-    padding: 56px 16px;
-  }
-
-  .services-grid-header {
-    margin-bottom: 40px;
-  }
-
-  .services-grid-title {
-    font-size: 1.9rem;
-    line-height: 1.2;
-  }
-
-  .services-grid-intro {
-    font-size: 0.95rem;
-  }
-
-  .services-grid-card {
-    padding: 22px;
-  }
-
-  .card-title {
-    font-size: 1.05rem;
-  }
-
-  .card-description {
-    font-size: 0.9rem;
-  }
-
-  .card-link {
-    font-size: 0.85rem;
-  }
-}
+}

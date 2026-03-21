@@ -4,7 +4,7 @@
 
 .service-detail {
   padding: 96px 24px 120px;
-  background-color: var(--bg-primary);
+  background-color: transparent;
   overflow-x: hidden;
 }
 

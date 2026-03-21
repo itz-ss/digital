@@ -3,7 +3,6 @@
 import { useState } from "react";
 import workData from "@/data/work.json";
 import RevealWrapper from "../UI/RevealWrapper";
-import WorkBackground from "@/components/backgroundAnimation/WorkBackground";
 import "./style/Work.css";
 
 export default function Work() {
@@ -92,7 +91,6 @@ export default function Work() {
 
   return (
     <>
-      <WorkBackground />
       <section className="work">
         <div className="work-container">
 

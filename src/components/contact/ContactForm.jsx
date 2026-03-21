@@ -72,6 +72,11 @@ export default function ContactForm() {
         </header>
 
         <form className="contact-form" onSubmit={handleSubmit}>
+          {/* 🎯 HUD CORNER ACCENTS */}
+          <div className="hud-corner hud-tl"></div>
+          <div className="hud-corner hud-tr"></div>
+          <div className="hud-corner hud-bl"></div>
+          <div className="hud-corner hud-br"></div>
 
           {/* Name */}
           <div className="form-field">
@@ -80,6 +85,7 @@ export default function ContactForm() {
               type="text"
               name="name"
               required
+              placeholder="e.g. Tony Stark"
               value={formData.name}
               onChange={handleChange}
             />
@@ -92,6 +98,7 @@ export default function ContactForm() {
               type="email"
               name="email"
               required
+              placeholder="tony@starkindustries.com"
               value={formData.email}
               onChange={handleChange}
             />
@@ -121,6 +128,7 @@ export default function ContactForm() {
             <textarea
               name="message"
               rows="4"
+              placeholder="Describe your vision..."
               value={formData.message}
               onChange={handleChange}
             />
@@ -130,7 +138,7 @@ export default function ContactForm() {
             type="submit"
             className="contact-submit"
             disabled={loading}
-            variant="secondary"
+            variant="primary"
           >
             {loading ? siteData.uiContent.common.buttons.sending : siteData.uiContent.common.buttons.sendMessage}
           </Button>

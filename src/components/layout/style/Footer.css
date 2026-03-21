@@ -1,21 +1,16 @@
 /* ===============================
-   Footer — DARK THEME (Desktop default)
+   Footer (Premium Agency)
 ================================ */
 
 .footer {
-  background-color: var(--bg-secondary); /* Dark Slate */
-  border-top: 1px solid var(--border-subtle);
-  border-radius: 20px 20px 0 0;
-  color: var(--text-primary);
-  position: relative;
-
+  background-color: var(--bg-secondary);
+  padding: 100px 24px 40px;
+  border-top: 1px solid var(--glass-border);
 }
 
 .footer-container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 72px 24px 32px;
-    
 }
 
 /* ===============================
@@ -23,44 +18,49 @@
 ================================ */
 
 .footer-top {
-  display: grid;
-  grid-template-columns: 1.2fr 2.8fr;
-  gap: 64px;
-  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 80px;
 }
 
 /* Brand */
+.footer-brand-block {
+  max-width: 300px;
+}
+
+.footer-logo {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 24px;
+}
+
 .footer-brand {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--accent-primary); /* Deep Purple */
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.02em;
 }
 
 .footer-tagline {
-  margin-top: 12px;
-  max-width: 280px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
-/* ===============================
-   Columns
-================================ */
-
+/* Columns */
 .footer-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  display: flex;
+  gap: 64px;
 }
 
 .footer-column h4 {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-primary);
+  color: var(--text-heading);
+  letter-spacing: 0.1em;
 }
 
 .footer-column ul {
@@ -74,19 +74,15 @@
 }
 
 .footer-column a {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color 180ms ease;
+  transition: all 0.2s ease;
 }
 
 .footer-column a:hover {
-  color: var(--accent-support); /* Soft Mint */
-}
-
-.footer-logo-img{
-  background-color: #ffffff7c;
-  border-radius: 32px;
+  color: var(--primary-red);
+  padding-left: 4px;
 }
 
 /* ===============================
@@ -94,86 +90,48 @@
 ================================ */
 
 .footer-bottom {
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 24px;
+  padding-top: 40px;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-bottom p {
-  font-size: 0.8rem;
-  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 /* ===============================
-   Tablet ≤1024px
+   Responsive
 ================================ */
 
 @media (max-width: 1024px) {
-  .footer-container {
-    padding: 64px 20px 32px;
-  }
-
   .footer-top {
-    grid-template-columns: 1fr 2fr;
+    flex-direction: column;
     gap: 48px;
   }
 
   .footer-columns {
     gap: 40px;
+    flex-wrap: wrap;
   }
 }
-
-/* ===============================
-   Mobile ≤768px
-================================ */
 
 @media (max-width: 768px) {
-  .footer-container {
-    padding: 56px 20px 28px;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .footer {
+    padding: 80px 20px 30px;
   }
 
   .footer-columns {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  .footer-tagline {
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
 }
 
-/* ===============================
-   Small Mobile ≤480px (CRITICAL)
-================================ */
-
 @media (max-width: 480px) {
-  .footer-container {
-    padding: 48px 16px 24px;
-  }
-
-  .footer-top {
-    gap: 32px;
-  }
-
   .footer-columns {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .footer-column h4 {
-    font-size: 0.8rem;
-    margin-bottom: 12px;
-  }
-
-  .footer-column a {
-    font-size: 0.85rem;
-  }
-
-  .footer-bottom p {
-    font-size: 0.75rem;
   }
 }

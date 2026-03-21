@@ -2,7 +2,6 @@
 
 import React from 'react';
 import RevealWrapper from "../UI/RevealWrapper";
-import ServicesBackground from "@/components/backgroundAnimation/ServicesBackground";
 import "./style/LegalTemplate.css";
 
 export default function LegalTemplate({ data }) {
@@ -10,8 +9,6 @@ export default function LegalTemplate({ data }) {
 
   return (
     <div className="legal-template">
-      <ServicesBackground />
-      
       <header className="legal-hero">
         <div className="legal-container">
           <RevealWrapper direction="up" delay={100}>

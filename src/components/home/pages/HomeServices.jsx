@@ -16,16 +16,16 @@ export default function HomeServices() {
 
         <RevealWrapper>
           <div className="services-heading-block">
-            <span className="services-eyebrow">What we do</span>
+            <span className="text-mono services-eyebrow">Module // 02 SERVICES</span>
             <h2 className="services-heading">
-              Services designed to drive real growth.
+              Engineered for measurable impact.
             </h2>
           </div>
         </RevealWrapper>
 
         <RevealWrapper delay={100}>
-          <Link href="/services" className="services-arrow">
-            View all services →
+          <Link href="/services" className="services-arrow text-mono">
+            View Protocol Directory →
           </Link>
         </RevealWrapper>
 
@@ -38,7 +38,9 @@ export default function HomeServices() {
             delay={index * 120}
             direction="up"
           >
-            <Card variant="blue-accent" className="service-card">
+            <Card variant="secondary" className="service-card">
+              <span className="text-mono service-id">ID_{service.id.toUpperCase()}</span>
+              
               <h3 className="service-title-card">
                 {service.label}
               </h3>
@@ -49,9 +51,9 @@ export default function HomeServices() {
 
               <Link
                 href={`/services/${service.id}`}
-                className="service-link"
+                className="service-link text-mono"
               >
-                Know more →
+                DEPLOY PROTOCOL →
               </Link>
             </Card>
           </RevealWrapper>

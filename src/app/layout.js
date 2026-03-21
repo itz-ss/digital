@@ -1,8 +1,12 @@
 import "@/app/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ArcReactorBackground from "@/components/layout/ArcReactorBackground";
+import ScrollManager from "@/components/UI/ScrollManager";
 import siteData from "@/data/site.json";
 import { generateOrganizationSchema } from "@/utils/schema_markup";
+import ThemeSwitcher from "@/components/layout/ThemeSwitcher";
+
 
 const orgSchema = generateOrganizationSchema();
 
@@ -26,7 +30,7 @@ export const metadata = {
   verification: {
     google: siteData.verification?.google,
   },
-    openGraph: {
+  openGraph: {
     title: `${siteData.name} | Best Digital Marketing Agency in ${siteData.city}`,
     description: `Scale your business with the leading digital marketing agency in ${siteData.city}. Expert SEO, SMM, and Performance Marketing.`,
     url: siteData.baseUrl,
@@ -71,11 +75,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <ScrollManager />
+        <ArcReactorBackground />
         <Navbar />
-          <div className="main-container">
-            {children}
-          </div>
-        
+        <div className="main-container">
+          {children}
+        </div>
+
+        <ThemeSwitcher />
         <Footer />
       </body>
     </html>

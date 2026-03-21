@@ -1,14 +1,13 @@
 /* ===============================
-   About Section — Desktop
+   About Page (Premium Agency)
 ================================ */
 
 .about {
-  padding: 120px 24px;
-  background-color: var(--bg-primary);
+  padding: 100px 24px;
 }
 
 .about-container {
-  max-width: 1100px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -17,29 +16,31 @@
 ================================ */
 
 .about-header {
-  max-width: 720px;
+  max-width: 900px;
   margin-bottom: 80px;
 }
 
 .about-title {
-  margin: 0 0 12px 0;
-  font-size: 3.4rem;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--text-heading);
+  font-weight: 800;
 }
 
 .about-tagline {
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 24px;
   font-size: 1.1rem;
-  color: var(--blue-primary);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--primary-red);
 }
 
 .about-intro {
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: var(--text-secondary);
+  max-width: 800px;
 }
 
 /* ===============================
@@ -50,31 +51,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin-bottom: 96px;
-}
-
-.about-card {
-  padding: 32px;
-  border-radius: var(--radius-lg);
-  background-color: var(--bg-soft);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.about-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  margin-bottom: 100px;
 }
 
 .about-card h3 {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-size: 1.4rem;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--text-heading);
 }
 
 .about-card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--text-secondary);
 }
@@ -84,10 +72,10 @@
 ================================ */
 
 .section-heading {
-  margin-bottom: 24px;
-  font-size: 1.8rem;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  margin-bottom: 32px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-heading);
 }
 
 .about-list {
@@ -97,22 +85,20 @@
 }
 
 .about-list li {
-  padding-left: 20px;
-  margin-bottom: 14px;
+  padding-left: 24px;
+  margin-bottom: 16px;
   position: relative;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
 .about-list li::before {
-  content: "•";
+  content: "→";
   position: absolute;
   left: 0;
-  color: var(--blue-primary);
-}
-
-.about-list.muted li {
-  color: var(--text-tertiary);
+  color: var(--primary-red);
+  font-weight: 700;
 }
 
 /* ===============================
@@ -120,38 +106,25 @@
 ================================ */
 
 .about-expertise {
-  margin-bottom: 96px;
+  margin-bottom: 100px;
 }
 
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.expertise-card {
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  background-color: var(--bg-primary);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.expertise-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  gap: 32px;
 }
 
 .expertise-card h4 {
-  margin-bottom: 8px;
-  font-size: 1.05rem;
-  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-heading);
 }
 
 .expertise-card p {
-  font-size: 0.9rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
@@ -160,21 +133,22 @@
 ================================ */
 
 .about-why {
-  margin-bottom: 96px;
+  margin-bottom: 100px;
 }
 
 .about-quote {
-  max-width: 720px;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  border-left: 4px solid var(--blue-primary);
-  padding-left: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--text-heading);
+  font-weight: 600;
+  font-style: italic;
+  border-left: 4px solid var(--primary-red);
+  padding-left: 32px;
+  margin: 0;
 }
 
 /* ===============================
-   Tablet ≤1024px
+   Responsive
 ================================ */
 
 @media (max-width: 1024px) {
@@ -185,19 +159,11 @@
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .about-title {
-    font-size: 3rem;
-  }
 }
-
-/* ===============================
-   Mobile ≤768px
-================================ */
 
 @media (max-width: 768px) {
   .about {
-    padding: 96px 20px;
+    padding: 80px 20px;
   }
 
   .expertise-grid {
@@ -205,29 +171,6 @@
   }
 
   .about-title {
-    font-size: 2.6rem;
-  }
-
-  .section-heading {
-    font-size: 1.6rem;
-  }
-}
-
-/* ===============================
-   Small Mobile ≤480px
-================================ */
-
-@media (max-width: 480px) {
-  .about {
-    padding: 72px 16px;
-  }
-
-  .about-title {
-    font-size: 2.2rem;
-  }
-
-  .about-quote {
-    font-size: 1.2rem;
-    padding-left: 18px;
+    font-size: 2.5rem;
   }
 }

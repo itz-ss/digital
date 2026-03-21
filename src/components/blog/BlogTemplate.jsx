@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import RevealWrapper from "../UI/RevealWrapper";
-import ServicesBackground from "@/components/backgroundAnimation/ServicesBackground";
 import blogsData from "@/data/blogs.json";
 import siteData from "@/data/site.json";
 import contactData from "@/data/contact.json";
@@ -50,7 +49,6 @@ export default function BlogTemplate({ blog }) {
 
   return (
     <>
-      <ServicesBackground />
       <div className="scroll-progress-container">
         <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>
       </div>
@@ -134,7 +132,7 @@ export default function BlogTemplate({ blog }) {
                 <Link href="/#contact" className="btn-primary">{siteData.uiContent.common.buttons.scheduleCall}</Link>
               </div>
             </RevealWrapper>
-            <Link href="/blog" className="back-link">← {labels.backToBlog}</Link>
+            <Link href="/" className="back-link">← Back to Home</Link>
           </footer>
         </div>
       </article>

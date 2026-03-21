@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import RevealWrapper from "../UI/RevealWrapper";
-import ServicesBackground from "@/components/backgroundAnimation/ServicesBackground";
 import "./style/ServiceDetail.css";
 
 export default function ServiceDetail({ id }) {
@@ -26,7 +25,6 @@ export default function ServiceDetail({ id }) {
 
   return (
     <>
-      <ServicesBackground />
       <section className="service-detail">
         <div className="service-detail-container">
 

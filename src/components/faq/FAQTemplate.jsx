@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import RevealWrapper from "../UI/RevealWrapper";
-import ServicesBackground from "@/components/backgroundAnimation/ServicesBackground";
 import siteData from "@/data/site.json";
 import "./style/FAQTemplate.css";
 
@@ -23,8 +22,6 @@ export default function FAQTemplate({ faqs }) {
 
   return (
     <div className="faq-template">
-      <ServicesBackground />
-      
       <header className="faq-hero">
         <div className="faq-container">
           <RevealWrapper direction="up" delay={100}>

@@ -1,0 +1,420 @@
+/* ================================
+   JARVIS CORE: ARC REACTOR — REDESIGNED
+================================ */
+
+/* ── ROOT CONTAINER ── */
+.arc-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   GRID LAYERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.arc-grid {
+  position: absolute;
+  inset: -20%;          /* Oversized so parallax never gaps */
+  background-image:
+    linear-gradient(rgba(var(--primary-accent-rgb), 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--primary-accent-rgb), 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.arc-grid--diagonal {
+  background-image:
+    linear-gradient(45deg, rgba(var(--primary-accent-rgb), 0.015) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(var(--primary-accent-rgb), 0.015) 1px, transparent 1px);
+  background-size: 128px 128px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PARALLAX WRAPPER (mouse-reactive)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.arc-parallax {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   GYROSCOPE SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.gyro-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+}
+
+/* ── Singularity (core) ── */
+.singularity {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.singularity-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  box-shadow:
+    0 0 20px 4px rgba(var(--primary-accent-rgb), 0.8),
+    0 0 60px 16px rgba(var(--primary-accent-rgb), 0.3),
+    0 0 120px 40px rgba(var(--primary-accent-rgb), 0.1);
+  animation: core-breathe 3s ease-in-out infinite;
+}
+
+.singularity-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--primary-accent-rgb), 0.5);
+  animation: core-breathe 3s ease-in-out infinite reverse;
+}
+
+@keyframes core-breathe {
+  0%, 100% { transform: scale(1);   opacity: 0.9; }
+  50%       { transform: scale(1.6); opacity: 1; }
+}
+
+/* ── Gyro Rings ── */
+.gyro-ring {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Ring 1 — tight precision ring */
+.gyro-r1 {
+  width: 160px; height: 160px;
+  border: 1px solid rgba(var(--primary-accent-rgb), 0.35);
+  box-shadow: 0 0 12px rgba(var(--primary-accent-rgb), 0.1);
+  animation: spin-cw 10s linear infinite;
+}
+
+/* Ring 2 — dashed ticker */
+.gyro-r2 {
+  width: 320px; height: 320px;
+  border: 1px dashed rgba(var(--primary-accent-rgb), 0.2);
+  animation: spin-ccw 18s linear infinite;
+}
+
+/* Ring 3 — segmented arc ring */
+.gyro-r3 {
+  width: 520px; height: 520px;
+  border: 2px solid transparent;
+  border-top-color:  rgba(var(--primary-accent-rgb), 0.6);
+  border-left-color: rgba(var(--primary-accent-rgb), 0.15);
+  filter: drop-shadow(0 0 10px rgba(var(--primary-accent-rgb), 0.3));
+  animation: spin-cw 22s ease-in-out infinite;
+}
+
+/* Ring 4 — outer compass ring */
+.gyro-r4 {
+  width: 800px; height: 800px;
+  border: 1px solid transparent;
+  border-top-color:   rgba(var(--primary-accent-rgb), 0.18);
+  border-bottom-color: rgba(var(--primary-accent-rgb), 0.18);
+  border-right-color: rgba(var(--primary-accent-rgb), 0.06);
+  animation: spin-ccw 35s linear infinite;
+}
+
+/* Ring 5 — vast conic sweep */
+.gyro-r5 {
+  width: 1300px; height: 1300px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(var(--primary-accent-rgb), 0.04) 2deg,
+    transparent 4deg,
+    transparent 90deg,
+    rgba(var(--primary-accent-rgb), 0.02) 92deg,
+    transparent 94deg
+  );
+  animation: spin-cw 55s linear infinite;
+}
+
+@keyframes spin-cw  { to { transform: translate(-50%, -50%) rotate(360deg);  } }
+@keyframes spin-ccw { to { transform: translate(-50%, -50%) rotate(-360deg); } }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ASYMMETRIC ORBITAL ARCS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.arc-orbit {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Arc A — tilted 35° / only top+right */
+.arc-orbit--a {
+  width: 420px; height: 180px;
+  border: 1px solid transparent;
+  border-top-color: rgba(var(--primary-accent-rgb), 0.5);
+  transform: translate(-50%, -50%) rotate(35deg);
+  filter: drop-shadow(0 0 6px rgba(var(--primary-accent-rgb), 0.25));
+  animation: spin-cw 14s linear infinite;
+}
+
+/* Arc B — tilted -55° / bigger */
+.arc-orbit--b {
+  width: 640px; height: 260px;
+  border: 1px dashed transparent;
+  border-bottom-color: rgba(var(--primary-accent-rgb), 0.3);
+  border-right-color:  rgba(var(--primary-accent-rgb), 0.1);
+  transform: translate(-50%, -50%) rotate(-55deg);
+  animation: spin-ccw 24s linear infinite;
+}
+
+/* Arc C — tilted 15° / widest */
+.arc-orbit--c {
+  width: 900px; height: 350px;
+  border: 1px solid transparent;
+  border-top-color:  rgba(var(--primary-accent-rgb), 0.12);
+  border-left-color: rgba(var(--primary-accent-rgb), 0.06);
+  transform: translate(-50%, -50%) rotate(15deg);
+  animation: spin-cw 40s linear infinite;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   DATA NODES (Orbiting blips)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.orbit-nodes {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* Set 1 — fast inner orbit */
+.orbit-nodes--1 {
+  width: 420px; height: 420px;
+  animation: spin-cw 14s linear infinite;
+}
+
+/* Set 2 — slower outer orbit */
+.orbit-nodes--2 {
+  width: 700px; height: 700px;
+  animation: spin-ccw 28s linear infinite;
+}
+
+.data-node {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  box-shadow: 0 0 10px 3px rgba(var(--primary-accent-rgb), 0.6);
+}
+
+.data-node--sm {
+  width: 4px; height: 4px;
+  box-shadow: 0 0 6px 2px rgba(var(--primary-accent-rgb), 0.4);
+}
+
+/* Distribute nodes around the circles */
+.orbit-nodes--1 .node-0 { top: 0;   left: 50%; transform: translate(-50%, -50%); }
+.orbit-nodes--1 .node-1 { top: 50%; right: 0;  transform: translate(50%, -50%); }
+.orbit-nodes--1 .node-2 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+.orbit-nodes--1 .node-3 { top: 50%;  left: 0;  transform: translate(-50%, -50%); }
+
+.orbit-nodes--2 .node-sm-0 { top: 0;   left: 30%; transform: translate(-50%, -50%); }
+.orbit-nodes--2 .node-sm-1 { bottom: 0; left: 70%; transform: translate(-50%, 50%); }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PULSE WAVES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.pulse-wave {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 1.5px solid var(--primary-accent);
+  opacity: 0;
+}
+
+.pw-1 { width: 20px; height: 20px; animation: pulse-out 6s ease-out infinite 0s; }
+.pw-2 { width: 20px; height: 20px; animation: pulse-out 6s ease-out infinite 2s; }
+.pw-3 { width: 20px; height: 20px; animation: pulse-out 6s ease-out infinite 4s; }
+
+@keyframes pulse-out {
+  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(60);  opacity: 0; }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HUD CORNER BRACKETS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.hud-bracket {
+  position: fixed;
+  width: 90px; height: 90px;
+}
+
+.hud-bracket--tl { top: 20px;  left: 20px; }
+.hud-bracket--tr { top: 20px;  right: 20px; }
+.hud-bracket--bl { bottom: 20px; left: 20px; }
+.hud-bracket--br { bottom: 20px; right: 20px; }
+
+.bracket-line {
+  position: absolute;
+  background: var(--primary-accent);
+  opacity: 0.35;
+}
+
+/* Horizontal lines */
+.bl-h { width: 40px; height: 1px; top: 0; left: 0; }
+/* Vertical lines */
+.bl-v { width: 1px; height: 40px; top: 0; left: 0; }
+
+/* Flip for right brackets */
+.hud-bracket--tr .bl-h { left: auto; right: 0; }
+.hud-bracket--tr .bl-v { left: auto; right: 0; }
+.hud-bracket--bl .bl-h { top: auto; bottom: 0; }
+.hud-bracket--bl .bl-v { top: auto; bottom: 0; }
+.hud-bracket--br .bl-h { top: auto; bottom: 0; left: auto; right: 0; }
+.hud-bracket--br .bl-v { top: auto; bottom: 0; left: auto; right: 0; }
+
+/* Corner code readout */
+.bracket-code {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+  opacity: 0.4;
+  white-space: nowrap;
+  animation: blink-code 4s ease-in-out infinite;
+}
+
+.hud-bracket--tl .bracket-code { top: 10px; left: 10px; }
+.hud-bracket--tr .bracket-code { top: 10px; right: 10px; }
+.hud-bracket--bl .bracket-code { bottom: 10px; left: 10px; }
+.hud-bracket--br .bracket-code { bottom: 10px; right: 10px; }
+
+@keyframes blink-code {
+  0%, 100% { opacity: 0.4; }
+  49%       { opacity: 0.4; }
+  50%       { opacity: 0.1; }
+  51%       { opacity: 0.4; }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   EDGE HORIZONTAL SCAN LINES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.scan-h {
+  position: fixed;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(var(--primary-accent-rgb), 0.5) 30%,
+    rgba(var(--primary-accent-rgb), 0.5) 70%,
+    transparent 100%);
+  opacity: 0;
+}
+
+.scan-h--top { top: 0;    animation: scan-top 12s ease-in-out infinite; }
+.scan-h--bot { bottom: 0; animation: scan-bot 16s ease-in-out infinite 3s; }
+
+@keyframes scan-top {
+  0%, 100% { opacity: 0; transform: scaleX(0.4); }
+  15%, 85%  { opacity: 0.25; transform: scaleX(1); }
+}
+@keyframes scan-bot {
+  0%, 100% { opacity: 0; transform: scaleX(0.2); }
+  20%, 80%  { opacity: 0.18; transform: scaleX(1); }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ENERGY PIPS (Moving particles)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.pips-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.pip {
+  position: absolute;
+  opacity: 0;
+  filter: drop-shadow(0 0 4px var(--primary-accent));
+}
+
+/* Horizontal pips */
+.pip-1,  .pip-3,  .pip-5,  .pip-7,  .pip-9  {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-accent) 60%, transparent);
+}
+/* Vertical pips */
+.pip-2,  .pip-4,  .pip-6,  .pip-8,  .pip-10 {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--primary-accent) 60%, transparent);
+}
+
+/* Distribute + animate */
+.pip-1  { top: 15%; left: -60px; width: 60px; animation: pip-h  7s linear infinite 0.5s; }
+.pip-3  { top: 38%; left: -60px; width: 80px; animation: pip-h  9s linear infinite 2s; }
+.pip-5  { top: 62%; left: -60px; width: 50px; animation: pip-h 11s linear infinite 4s; }
+.pip-7  { top: 80%; left: -60px; width: 70px; animation: pip-h  8s linear infinite 1s; }
+.pip-9  { top: 50%; right:-60px; width: 60px; animation: pip-h-r 13s linear infinite 3s; }
+
+.pip-2  { left: 20%; top: -60px;  height: 60px; animation: pip-v  8s linear infinite 1s; }
+.pip-4  { left: 45%; top: -60px;  height: 80px; animation: pip-v 12s linear infinite 3s; }
+.pip-6  { left: 70%; top: -60px;  height: 50px; animation: pip-v  9s linear infinite 0.5s; }
+.pip-8  { left: 85%; bottom:-60px; height: 70px; animation: pip-v-r 10s linear infinite 2s; }
+.pip-10 { left: 30%; bottom:-60px; height: 60px; animation: pip-v-r 15s linear infinite 5s; }
+
+@keyframes pip-h {
+  0%   { left: -80px; opacity: 0; }
+  8%   { opacity: 0.7; }
+  92%  { opacity: 0.7; }
+  100% { left: 110%; opacity: 0; }
+}
+@keyframes pip-h-r {
+  0%   { right: -80px; opacity: 0; }
+  8%   { opacity: 0.6; }
+  92%  { opacity: 0.6; }
+  100% { right: 110%; opacity: 0; }
+}
+@keyframes pip-v {
+  0%   { top: -80px; opacity: 0; }
+  8%   { opacity: 0.7; }
+  92%  { opacity: 0.7; }
+  100% { top: 110%; opacity: 0; }
+}
+@keyframes pip-v-r {
+  0%   { bottom: -80px; opacity: 0; }
+  8%   { opacity: 0.6; }
+  92%  { opacity: 0.6; }
+  100% { bottom: 110%; opacity: 0; }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   VIGNETTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.arc-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 30%,
+    rgba(var(--bg-primary-rgb), 0.5) 70%,
+    var(--bg-primary) 100%
+  );
+}

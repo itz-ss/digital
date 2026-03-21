@@ -1,61 +1,64 @@
 /* ===============================
-   Services Section (Desktop default)
+   JARVIS MODULE: SERVICES
 ================================ */
 
 .services-preview {
-  padding: 64px 24px 72px;
+  padding: 120px 24px;
+  background-color: transparent;
 }
-
-/* ===============================
-   Header
-================================ */
 
 .services-header {
   max-width: var(--container-width);
-  margin: 0 auto 32px;
+  margin: 0 auto 80px;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
+  gap: 32px;
 }
 
-/* Heading block */
 .services-heading-block {
-  max-width: 680px;
+  max-width: 720px;
 }
 
-/* Eyebrow */
 .services-eyebrow {
   display: block;
-  margin: 0 0 4px 0;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
+  margin-bottom: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--primary-accent);
 }
 
-/* Main heading */
 .services-heading {
   margin: 0;
-  font-size: 3.2rem;
-  line-height: 1.12;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--text-heading);
+  font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
-  font-weight: 900;
 }
 
-/* View all arrow */
 .services-arrow {
-  margin-top: 6px;
-  font-size: 0.95rem;
-  color: var(--blue-primary);
+  font-size: 0.8rem;
+  color: var(--primary-accent);
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(var(--primary-accent-rgb), 0.2);
+  padding-bottom: 4px;
+}
+
+.services-arrow:hover {
+  border-bottom-color: var(--primary-accent);
+  gap: 16px;
 }
 
 /* ===============================
-   Grid
+   GRID SYSTEM
 ================================ */
 
 .services-container {
@@ -63,154 +66,97 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 40px;
 }
 
 /* ===============================
-   Card
+   HOLOGRAPHIC CARDS
 ================================ */
 
 .service-card {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Bottom-to-up glow animation on hover */
-.service-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.service-card:hover::before {
-  animation: glow-up 0.8s ease-out forwards;
-}
-
-/* Top-to-down glow animation on hover-out */
-.service-card:not(:hover)::before {
-  animation: glow-down 0.8s ease-out forwards;
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .service-card:hover {
-  background: linear-gradient(135deg, hsla(220, 80%, 18%, 0.2) 0%, hsla(0, 0%, 10%, 0.6) 100%);
-  box-shadow:
-    0 12px 48px rgba(0, 0, 0, 0.5),
-    0 0 24px hsla(220, 80%, 60%, 0.12),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  transform: translateY(-4px);
-  border-color: hsla(220, 80%, 60%, 0.25);
+  transform: translateY(-8px);
+  border-color: var(--primary-accent);
+  box-shadow: 0 20px 40px rgba(var(--primary-accent-rgb), 0.1);
+}
+
+.service-id {
+  font-size: 0.65rem;
+  margin-bottom: 24px;
+  opacity: 0.6;
 }
 
 .service-title-card {
-  margin: 0 0 12px 0;
-  font-size: 1.15rem;
-  color: var(--text-primary);
+  margin: 0 0 24px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 8px rgba(var(--primary-accent-rgb), 0.4));
 }
 
 .service-description {
-  margin: 0 0 24px 0;
-  font-size: 0.95rem;
+  margin: 0 0 32px 0;
+  font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-secondary);
+  flex-grow: 1;
 }
 
-/* Know more link */
 .service-link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  text-decoration: underline;
-  text-decoration-color: var(--text-muted);
-  text-underline-offset: 3px;
-  align-self: flex-start;
-  transition: all 200ms ease;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .service-link:hover {
-  text-decoration: underline;
+  gap: 12px;
+  opacity: 0.8;
 }
 
 /* ===============================
-   Tablet ≤1024px
+   RESPONSIVE
 ================================ */
 
 @media (max-width: 1024px) {
-  .services-header {
-    margin-bottom: 28px;
-  }
-
-  .services-heading {
-    font-size: 2.6rem;
-  }
-
   .services-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
   }
 }
 
-/* ===============================
-   Mobile ≤768px
-================================ */
-
 @media (max-width: 768px) {
   .services-preview {
-    padding: 56px 20px 64px;
+    padding: 80px 24px;
   }
 
   .services-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
-  }
-
-  .services-heading {
-    font-size: 2.2rem;
-  }
-
-  .services-arrow {
-    margin-top: 0;
+    margin-bottom: 56px;
   }
 
   .services-container {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-/* ===============================
-   Small Mobile ≤480px (CRITICAL)
-================================ */
-
-@media (max-width: 480px) {
-  .services-preview {
-    padding: 48px 16px 56px;
-  }
-
-  .services-heading {
-    font-size: 1.9rem;
-    line-height: 1.2;
+    gap: 32px;
   }
 
   .service-card {
-    padding: 22px;
+    padding: 32px;
   }
-
-  .service-description {
-    font-size: 0.9rem;
-  }
-
-  .service-link {
-    font-size: 0.85rem;
-  }
-}
+}

@@ -2,7 +2,6 @@ import Link from "next/link";
 import servicesData from "@/data/services.json";
 import Card from "@/components/UI/Card";
 import RevealWrapper from "@/components/UI/RevealWrapper";
-import ServicesBackground from "@/components/backgroundAnimation/ServicesBackground";
 import "./style/ServicesGrid.css";
 
 export default function ServicesGrid() {
@@ -10,7 +9,6 @@ export default function ServicesGrid() {
 
     return (
         <>
-            <ServicesBackground />
             <section className="services-grid">
                 <div className="services-grid-container">
                     {/* Header */}
@@ -39,7 +37,7 @@ export default function ServicesGrid() {
 
                             <Card
                                 key={service.id}
-                                variant="red-accent"
+                                variant="secondary"
                                 href={`/services/${service.id}`}
                                 className="services-grid-card"
                             >

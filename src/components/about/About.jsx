@@ -1,13 +1,11 @@
 import aboutData from "@/data/about.json";
 import RevealWrapper from "../UI/RevealWrapper";
 import Card from "../UI/Card";
-import AboutBackground from "@/components/backgroundAnimation/AboutBackground";
 import "./style/About.css";
 
 export default function About() {
   return (
     <>
-      <AboutBackground />
       <section className="about">
         <div className="about-container">
           {/* Header */}
@@ -26,7 +24,7 @@ export default function About() {
           {/* Vision + Mission */}
           <RevealWrapper direction="up" delay={240}>
             <div className="about-duo">
-              <Card className="about-card" variant="blue-accent">
+              <Card className="about-card" variant="secondary">
                 <RevealWrapper direction="up" delay={240}>
                   <h3>{aboutData.vision.title}</h3>
                 </RevealWrapper>
@@ -34,7 +32,7 @@ export default function About() {
                   <p>{aboutData.vision.description}</p>
                 </RevealWrapper>
               </Card>
-              <Card className="about-card"  variant="blue-accent">
+              <Card className="about-card"  variant="secondary">
                 <RevealWrapper direction="up" delay={240}>
                   <h3>{aboutData.mission.title}</h3>
                 </RevealWrapper>
@@ -67,7 +65,7 @@ export default function About() {
               </RevealWrapper>
               <div className="expertise-grid">
                 {aboutData.coreExpertise.map((item, i) => (
-                  <Card key={i} className="expertise-card" variant="blue-accent">
+                  <Card key={i} className="expertise-card" variant="secondary">
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>
                   </Card>
@@ -78,7 +76,7 @@ export default function About() {
 
           {/* Why choose us */}
           <RevealWrapper direction="up" delay={240}>
-            <Card className="about-why" variant="blue-accent">
+            <Card className="about-why" variant="secondary">
               <RevealWrapper direction="up" delay={240}>
                 <h3 className="section-heading">
                   {aboutData.whyChooseUs.title}
@@ -94,7 +92,7 @@ export default function About() {
 
           {/* Philosophy */}
           <RevealWrapper direction="up" delay={240}>
-            <Card variant="blue-accent">
+            <Card variant="secondary">
               <blockquote className="about-quote">
                 “{aboutData.philosophy.quote}”
               </blockquote>

@@ -5,13 +5,10 @@ import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import Testimonials from "./pages/Testimonials";
 import BlogHighlights from "./pages/BlogHighlights";
 import ContactCTA from "./pages/ContactCTA";
-import AnimatedBackground from '../backgroundAnimation/AnimatedBackground';
-// import "./style/home.css";
 
 export default function Home() {
   return (
     <div>
-      <AnimatedBackground />
       <Hero />
       <HomeServices />
       <section className="howWeWork">

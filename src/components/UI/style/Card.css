@@ -1,89 +1,72 @@
 /* ===============================
-   Glass Card Component
+   JARVIS MIDNIGHT ARCHIVE: CARDS
 ================================ */
 
 .glass-card {
     position: relative;
-    padding: 28px;
-    border-radius: var(--radius-lg);
+    padding: 40px;
+    border-radius: 2px; /* Sharp technical alignment */
     overflow: hidden;
 
-    background: linear-gradient(135deg, hsla(0, 0%, 10%, 0.6) 0%, hsla(0, 0%, 8%, 0.5) 100%);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    background: rgba(var(--bg-primary-rgb), 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 
-    border: 1px solid hsla(0, 0%, 100%, 0.08);
+    border: 1px solid rgba(var(--primary-accent-rgb), 0.1);
+    box-shadow: inset 0 0 20px rgba(var(--primary-accent-rgb), 0.02);
 
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
-
-    transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .glass-card:hover {
-    background: linear-gradient(135deg, hsla(0, 0%, 12%, 0.7) 0%, hsla(0, 0%, 10%, 0.6) 100%);
-    transform: translateY(-4px);
-    box-shadow:
-        0 12px 48px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-    border-color: hsla(0, 0%, 100%, 0.12);
+    transform: translateY(-8px);
+    border-color: rgba(var(--primary-accent-rgb), 0.3);
+    background: rgba(8, 15, 30, 0.85);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(var(--primary-accent-rgb), 0.05);
 }
 
-/* ===============================
-   Red Accent Variant
-================================ */
-
-.glass-card--red-accent {
-    border-color: hsla(0, 85%, 60%, 0.15);
-    @media (max-width: 768px) {
-        border-color: hsla(0, 85%, 60%, 0.3);
-        box-shadow:
-            0 12px 48px rgba(0, 0, 0, 0.5),
-            0 0 24px hsla(0, 85%, 60%, 0.15),
-            0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-    }
+/* 🤖 ACCENT: CYAN PROTOCOL */
+.glass-card--cyan-accent,
+.glass-card--red-accent { 
+    border-left: 2px solid var(--primary-accent);
 }
 
-.glass-card--red-accent:hover {
-    border-color: hsla(0, 85%, 60%, 0.3);
-    box-shadow:
-        0 12px 48px rgba(0, 0, 0, 0.5),
-        0 0 24px hsla(0, 85%, 60%, 0.15),
-        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+/* 🤖 SECONDARY: CLINICAL DARK FRAME */
+.glass-card--secondary {
+    background: rgba(10, 18, 32, 0.6);
 }
 
-/* ===============================
-   Blue Accent Variant
-================================ */
-
-.glass-card--blue-accent {
-    background: linear-gradient(135deg, hsla(220, 80%, 15%, 0.15) 0%, hsla(0, 0%, 8%, 0.5) 100%);
-    border-color: hsla(220, 80%, 60%, 0.12);
-    @media (max-width: 768px) {
-        border-color: hsla(220, 80%, 60%, 0.3);
-        box-shadow:
-            0 12px 48px rgba(0, 0, 0, 0.5),
-            0 0 24px hsla(220, 80%, 60%, 0.15),
-            0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-    }
+.glass-card--secondary:hover {
+    background: rgba(15, 25, 45, 0.8);
+    box-shadow: var(--glow-cyan);
 }
 
-.glass-card--blue-accent:hover {
-    background: linear-gradient(135deg, hsla(220, 80%, 18%, 0.2) 0%, hsla(0, 0%, 10%, 0.6) 100%);
-    border-color: hsla(220, 80%, 60%, 0.35);
-    box-shadow:
-        0 12px 48px rgba(0, 0, 0, 0.5),
-        0 0 32px hsla(220, 80%, 60%, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-}
-
-/* ===============================
-   Link Card
-================================ */
-
+/* 🤖 LINK CARD: SYSTEM ACCESS */
 a.glass-card {
     text-decoration: none;
     color: inherit;
     display: block;
+    cursor: pointer;
 }
+
+/* 🤖 HUD CORNERS (UTILITY) */
+.hud-corner {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1.5px solid var(--primary-accent);
+    opacity: 0.6;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.hud-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.hud-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.hud-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.hud-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+.glass-card:hover .hud-corner {
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
