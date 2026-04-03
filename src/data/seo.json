@@ -7,16 +7,20 @@
   },
   "templates": {
     "service_location": {
-      "title": "{service} Services in {location} | DigitalGram {location}",
-      "description": "Looking for {service} in {location}? DigitalGram offers top-rated {service} solutions in {location}, India. Scale your business with our expert national-level marketing team."
+      "title": "Best {service} Agency in {location} | #1 Digital Agency",
+      "description": "Looking for the best marketing agency or digital agency for {service} in {location}? DigitalGram (TheDigitalGram) provides top-rated {service} to build your digital presence."
     },
     "service_india": {
-      "title": "Best {service} Agency in India | DigitalGram National Presence",
-      "description": "Ranked #1 for {service} in India. DigitalGram helps businesses across Delhi, Mumbai, and Bangalore scale with performance-driven marketing."
+      "title": "Best {service} Agency in India | #1 Digital Gram National",
+      "description": "Ranked the #1 digital agency and marketing agency for {service} in India. DigitalGram helps businesses nationwide scale their digital presence."
     },
     "service_industry": {
-      "title": "{service} for {industry} Companies | DigitalGram",
-      "description": "Specialized {service} for {industry} businesses. DigitalGram helps {industry} companies in Kanpur grow with data-driven marketing strategies."
+      "title": "Best {service} for {industry} | Expert Marketing Agency",
+      "description": "Specialized {service} for {industry} companies. DigitalGram is the digital agency that builds your digital presence with data-driven growth strategies."
+    },
+    "triple_match": {
+      "title": "{industry} {service} Agency in {location} | Digital Gram",
+      "description": "The leading marketing agency for {industry} {service} in {location}. DigitalGram (TheDigitalGram) helps {industry} brands grow their digital presence and revenue."
     }
   }
 }

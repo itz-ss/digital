@@ -97,7 +97,7 @@ export default function Work() {
           {/* Header */}
           <header className="work-header">
             <RevealWrapper direction="up" delay={240}>
-              <h2 className="work-title">Our Work</h2>
+              <h1 className="work-title">Our Work</h1>
             </RevealWrapper>
             <RevealWrapper direction="up" delay={240}>
               <p className="work-intro">

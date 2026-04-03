@@ -12,6 +12,8 @@
   "state": "Uttar Pradesh",
   "country": "India",
   "baseUrl": "https://www.thedigitalgram.in",
+  "brandVariations": ["DigitalGram", "Digital Gram", "TheDigitalGram", "The Digital Gram", "TheDigitGram"],
+  "searchTerms": ["digital agency", "marketing agency", "digital presence", "growth agency", "top marketing agency"],
   "verification": {
     "google": "YOUR_GOOGLE_VERIFICATION_TOKEN_HERE"
   },

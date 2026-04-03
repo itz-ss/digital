@@ -6,6 +6,7 @@ import ScrollManager from "@/components/UI/ScrollManager";
 import siteData from "@/data/site.json";
 import { generateOrganizationSchema } from "@/utils/schema_markup";
 import ThemeSwitcher from "@/components/layout/ThemeSwitcher";
+import GoogleAnalytics from "@/components/layout/GoogleAnalytics";
 
 
 const orgSchema = generateOrganizationSchema();
@@ -17,8 +18,16 @@ export const metadata = {
     default: `${siteData.name} | Digital Marketing Agency in ${siteData.city}`,
     template: `%s | ${siteData.name}`
   },
-  description: `${siteData.name} is the leading digital marketing agency in ${siteData.city}, specializing in SEO, Social Media, and Performance Marketing for growth-focused businesses.`,
-  keywords: [`Digital Marketing Agency ${siteData.city}`, `SEO Services ${siteData.city}`, `Social Media Marketing ${siteData.city}`, `Performance Marketing ${siteData.country}`, `Web Development ${siteData.city}`],
+  description: `${siteData.name} (also known as ${siteData.brandVariations.join(', ')}) is the leading digital agency and marketing agency in ${siteData.city}. We build your digital presence through expert SEO, Social Media, and Performance Marketing.`,
+  keywords: [
+    ...siteData.brandVariations,
+    ...siteData.searchTerms,
+    `Digital Marketing Agency ${siteData.city}`, 
+    `SEO Services ${siteData.city}`, 
+    `Social Media Marketing ${siteData.city}`, 
+    `Performance Marketing ${siteData.country}`, 
+    `Web Development ${siteData.city}`
+  ],
   authors: [{ name: `${siteData.name} Team` }],
   creator: siteData.name,
   publisher: siteData.name,
@@ -75,6 +84,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <GoogleAnalytics />
         <ScrollManager />
         <ArcReactorBackground />
         <Navbar />

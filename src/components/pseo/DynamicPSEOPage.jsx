@@ -28,6 +28,10 @@ export default function DynamicPSEOPage({ type, data }) {
     title = `Best ${service.label} Agency in India`;
     description = `Leading ${service.label} services across India. DigitalGram helps brands in Delhi, Mumbai, Bangalore, and beyond scale with premium performance-driven marketing.`;
     eyebrow = "India";
+  } else if (type === 'triple-match') {
+    title = `${industry.name} ${service.label} in ${location.name}`;
+    description = `Leading ${industry.name} specialized ${service.label} agency in ${location.name}. DigitalGram helps ${industry.name} professionals in ${location.name} grow their brand and revenue with targeted marketing.`;
+    eyebrow = `${industry.name} • ${location.name}`;
   }
 
   const faqs = faqsData.services?.[service.id] || [];
@@ -71,7 +75,7 @@ export default function DynamicPSEOPage({ type, data }) {
                 <h2>{siteData.uiContent.pseo.labels.critical.replace(/{service}/g, service.label).replace(/{location}/g, eyebrow)}</h2>
                 <p>
                   In today's competitive landscape, having a strong digital presence is no longer optional. 
-                  For businesses in {type === 'service-location' ? `${location.name}, ${location.state || 'UP'}` : type === 'national' ? 'India' : `the ${industry.name} sector`}, 
+                  For businesses in {type === 'service-location' ? `${location.name}` : type === 'triple-match' ? `${industry.name} in ${location.name}` : type === 'national' ? 'India' : `the ${industry.name} sector`}, 
                   {service.label} provides the visibility and authority needed to stand out.
                 </p>
                 {type === 'service-location' && (

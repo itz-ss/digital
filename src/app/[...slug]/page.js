@@ -51,6 +51,18 @@ export async function generateStaticParams() {
   paths.push({ slug: ["terms"] });
   paths.push({ slug: ["faq"] });
 
+  // 6. Triple-Match Patterns: {service}-for-{industry}-in-{location}
+  const highValueIndustries = ["healthcare", "real-estate", "education"];
+  servicesData.tabs.forEach(service => {
+    industriesData.industries
+      .filter(industry => highValueIndustries.includes(industry.slug))
+      .forEach(industry => {
+        locationsData.target_areas.forEach(location => {
+          paths.push({ slug: [`${service.id}-for-${industry.slug}-in-${location.slug}`] });
+        });
+      });
+  });
+
   return paths;
 }
 
@@ -152,6 +164,37 @@ export async function generateMetadata({ params }) {
           title,
           description,
           url: `${siteData.baseUrl}/${path}`,
+        }
+      };
+    }
+  }
+
+  // Handle Triple Match Pattern: {service}-for-{industry}-in-{location}
+  const tmMatch = path.match(/^(.+)-for-(.+)-in-(.+)$/);
+  if (tmMatch) {
+    const serviceSlug = tmMatch[1];
+    const industrySlug = tmMatch[2];
+    const locationSlug = tmMatch[3];
+    const service = servicesData.tabs.find(s => s.id === serviceSlug);
+    const industry = industriesData.industries.find(i => i.slug === industrySlug);
+    const location = locationsData.target_areas.find(l => l.slug === locationSlug);
+
+    if (service && industry && location) {
+      const template = seoData.templates.triple_match;
+      const title = template.title
+        .replace(/{service}/g, service.label)
+        .replace(/{industry}/g, industry.name)
+        .replace(/{location}/g, location.name);
+      const description = template.description
+        .replace(/{service}/g, service.label)
+        .replace(/{industry}/g, industry.name)
+        .replace(/{location}/g, location.name);
+      
+      return {
+        title,
+        description,
+        alternates: {
+          canonical: `${siteData.baseUrl}/${path}`,
         }
       };
     }
@@ -269,6 +312,36 @@ export default async function Page({ params }) {
     const service = servicesData.tabs.find(s => s.id === nationalMatch[1]);
     if (service) {
       return <DynamicPSEOPage type="national" data={{ service }} />;
+    }
+  }
+
+  // 5. Triple-Match Pages
+  const tmMatch = path.match(/^(.+)-for-(.+)-in-(.+)$/);
+  if (tmMatch) {
+    const service = servicesData.tabs.find(s => s.id === tmMatch[1]);
+    const industry = industriesData.industries.find(i => i.slug === tmMatch[2]);
+    const location = locationsData.target_areas.find(l => l.slug === tmMatch[3]);
+    if (service && industry && location) {
+      const schemas = [
+        generateLocalBusinessSchema({ location, service }),
+        generateBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: service.label, path: `/services/${service.id}` },
+          { name: industry.name, path: `/${service.id}-for-${industry.slug}` },
+          { name: location.name, path: `/${path}` }
+        ]),
+        generateServiceSchema({ service, location })
+      ];
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+          />
+          <DynamicPSEOPage type="triple-match" data={{ service, industry, location }} />
+        </>
+      );
     }
   }
 
