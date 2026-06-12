@@ -2,7 +2,7 @@
   "name": "DigitalGram",
   "logoText": "DigitalGram",
   "logo": {
-    "header": "/logo/favicon-32x32.png",
+    "header": "/logo/android-chrome-192x192.svg",
     "footer": "/logo/android-chrome-192x192.png",
     "favicon": "/favicon.ico",
     "alt": "DigitalGram Logo"
@@ -13,10 +13,7 @@
   "country": "India",
   "baseUrl": "https://www.thedigitalgram.in",
   "brandVariations": ["DigitalGram", "Digital Gram", "TheDigitalGram", "The Digital Gram", "TheDigitGram"],
-  "searchTerms": ["digital agency", "marketing agency", "digital presence", "growth agency", "top marketing agency"],
-  "verification": {
-    "google": "YOUR_GOOGLE_VERIFICATION_TOKEN_HERE"
-  },
+  "searchTerms": ["digital agency", "marketing agency", "digital presence", "growth agency", "top marketing agency", "video editing agency"],
   "navigation": [
     { "label": "Home", "href": "/" },
     { "label": "Services", "href": "/services" },

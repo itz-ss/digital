@@ -1,0 +1,274 @@
+{
+  "geoKeywords": {
+    "kanpur": {
+      "tier": "tier1",
+      "primary": [
+        "digital marketing agency in kanpur",
+        "seo services kanpur",
+        "social media marketing kanpur",
+        "web development kanpur",
+        "video editing kanpur",
+        "content creation kanpur",
+        "performance marketing kanpur",
+        "pr agency kanpur",
+        "branding agency kanpur",
+        "digital agency kanpur",
+        "marketing agency kanpur",
+        "best digital marketing agency kanpur",
+        "top seo company kanpur",
+        "kanpur digital agency",
+        "kanpur marketing services"
+      ],
+      "secondary": [
+        "digital marketing services in kanpur",
+        "online marketing kanpur",
+        "google ads kanpur",
+        "instagram marketing kanpur",
+        "facebook marketing kanpur",
+        "website design kanpur",
+        "e-commerce solutions kanpur",
+        "lead generation kanpur",
+        "brand building kanpur"
+      ],
+      "byService": {
+        "seo": [
+          "seo company kanpur",
+          "seo services kanpur",
+          "local seo kanpur",
+          "seo expert kanpur",
+          "search engine optimization kanpur"
+        ],
+        "smm": [
+          "social media marketing kanpur",
+          "instagram marketing agency kanpur",
+          "facebook marketing kanpur",
+          "social media management kanpur"
+        ],
+        "content": [
+          "content marketing kanpur",
+          "video production kanpur",
+          "graphic design kanpur",
+          "content creation agency kanpur"
+        ],
+        "web": [
+          "web design kanpur",
+          "website development kanpur",
+          "web development company kanpur",
+          "landing page design kanpur"
+        ]
+      }
+    },
+    "kanpurNearby": {
+      "tier": "tier1",
+      "areas": {
+        "jajmau": {
+          "keywords": [
+            "digital marketing jajmau",
+            "seo services jajmau kanpur",
+            "digital agency jajmau"
+          ]
+        },
+        "viratNagar": {
+          "keywords": [
+            "marketing services virat nagar",
+            "seo company virat nagar kanpur"
+          ]
+        },
+        "bithoor": {
+          "keywords": [
+            "digital marketing bithoor",
+            "web development bithoor kanpur"
+          ]
+        },
+        "fatehpur": {
+          "keywords": [
+            "digital agency fatehpur",
+            "marketing services fatehpur kanpur"
+          ]
+        }
+      }
+    },
+    "uttarPradesh": {
+      "tier": "tier2",
+      "primary": [
+        "digital marketing agency uttar pradesh",
+        "seo services up india",
+        "digital agency lucknow",
+        "marketing agency agra",
+        "web development varanasi",
+        "best marketing services uttar pradesh",
+        "digital marketing company up"
+      ],
+      "byCity": {
+        "lucknow": [
+          "digital marketing agency lucknow",
+          "seo services lucknow",
+          "social media marketing lucknow",
+          "best digital agency lucknow"
+        ],
+        "agra": [
+          "digital marketing agra",
+          "web design agra",
+          "seo company agra"
+        ],
+        "varanasi": [
+          "digital marketing varanasi",
+          "seo services varanasi",
+          "web development varanasi"
+        ]
+      }
+    },
+    "india": {
+      "tier": "tier3",
+      "national": [
+        "digital marketing agency india",
+        "seo services india",
+        "best marketing agency india",
+        "performance marketing india",
+        "growth agency india",
+        "digital transformation agency india",
+        "content marketing services india",
+        "video production agency india",
+        "web development company india"
+      ],
+      "byCity": {
+        "delhi": [
+          "digital marketing agency delhi",
+          "seo services delhi ncr",
+          "marketing company delhi"
+        ],
+        "mumbai": [
+          "digital marketing agency mumbai",
+          "marketing services mumbai",
+          "seo company mumbai"
+        ],
+        "bangalore": [
+          "digital marketing bangalore",
+          "seo services bangalore",
+          "tech agency bangalore"
+        ],
+        "hyderabad": [
+          "digital marketing hyderabad",
+          "marketing agency hyderabad"
+        ]
+      }
+    },
+    "international": {
+      "tier": "tier4",
+      "global": [
+        "digital marketing agency",
+        "global seo services",
+        "international marketing agency",
+        "worldwide web development",
+        "remote digital services"
+      ],
+      "byRegion": {
+        "southAsia": [
+          "digital marketing agency south asia",
+          "seo services bangladesh",
+          "marketing agency sri lanka"
+        ],
+        "middleEast": [
+          "digital marketing agency uae",
+          "seo services dubai",
+          "marketing agency middle east"
+        ],
+        "usCanada": [
+          "digital marketing agency usa",
+          "seo services canada",
+          "web development usa"
+        ]
+      }
+    }
+  },
+  "serviceKeywords": {
+    "seo": {
+      "kanpur": [
+        "seo kanpur",
+        "search engine optimization kanpur",
+        "local seo kanpur",
+        "seo audit kanpur",
+        "keyword research kanpur"
+      ],
+      "india": [
+        "seo services india",
+        "search engine optimization india",
+        "best seo company india"
+      ],
+      "international": [
+        "international seo services",
+        "multilingual seo",
+        "global search optimization"
+      ]
+    },
+    "smm": {
+      "kanpur": [
+        "instagram marketing kanpur",
+        "facebook marketing kanpur",
+        "social media manager kanpur",
+        "reels creation kanpur"
+      ],
+      "india": [
+        "social media marketing india",
+        "instagram growth india",
+        "facebook advertising india"
+      ]
+    },
+    "content": {
+      "kanpur": [
+        "content creation kanpur",
+        "video editing kanpur",
+        "graphic design kanpur"
+      ],
+      "india": [
+        "content marketing agency india",
+        "video production services india"
+      ]
+    },
+    "web": {
+      "kanpur": [
+        "website design kanpur",
+        "web development kanpur",
+        "e-commerce website kanpur"
+      ],
+      "india": [
+        "website development services india",
+        "web design company india",
+        "funnel development india"
+      ]
+    }
+  },
+  "modifiers": {
+    "quality": [
+      "best",
+      "top",
+      "#1",
+      "leading",
+      "professional",
+      "certified",
+      "experienced",
+      "trusted"
+    ],
+    "urgency": [
+      "affordable",
+      "cheap",
+      "budget-friendly",
+      "cost-effective",
+      "inexpensive"
+    ],
+    "type": [
+      "agency",
+      "company",
+      "services",
+      "consultant",
+      "expert",
+      "professional",
+      "firm"
+    ]
+  },
+  "metadata": {
+    "totalKeywords": 500,
+    "updateFrequency": "quarterly",
+    "strategy": "Tier-based geographic expansion with service specialization"
+  }
+}

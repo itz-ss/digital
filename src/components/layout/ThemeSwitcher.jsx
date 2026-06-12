@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import contactData from "@/data/contact.json";
 import "./style/ThemeSwitcher.css";
 
 const themes = [
@@ -68,6 +69,31 @@ export default function ThemeSwitcher() {
       >
         <span className="theme-toggle-icon">◈</span>
       </button>
+
+      {/* Floating WhatsApp and Call actions */}
+      <div className="theme-contact-actions">
+        <a
+          className="contact-action-btn whatsapp"
+          href={contactData.contactInfo.whatsapp.href}
+          target="_blank"
+          rel="noreferrer"
+          title="Chat on WhatsApp"
+        >
+          <span className="contact-action-icon whatsapp">
+            <img src="/whatsapp.svg" alt="WhatsApp icon" loading="lazy" />
+          </span>
+        </a>
+
+        <a
+          className="contact-action-btn phone"
+          href={contactData.contactInfo.phone.href}
+          title="Call us now"
+        >
+          <span className="contact-action-icon phone">
+            <img src="/call.svg" alt="Call icon" loading="lazy" />
+          </span>
+        </a>
+      </div>
 
       {/* Panel */}
       <div className="theme-panel" role="listbox" aria-label="Color scheme options">

@@ -34,6 +34,23 @@
       ],
       "theme": "pink"
     },
+    {
+      "id": "video-editing",
+      "label": "Video Editing Agency",
+      "title": "Video Editing & Post-Production",
+      "description": "Polished video editing and post-production services that elevate your brand stories.",
+      "detailedDescription": "Video Editing & Post-Production Agency - Crafting visuals that move audiences! A great story deserves masterful editing, and DigitalGram brings cinematic polish to every frame. Our video editing services turn raw footage into high-impact marketing assets designed for social, web, and brand campaigns.\n\nFrom trimming and sequencing to color grading, sound design, and motion graphics, we transform your content into compelling video experiences. Whether you're producing promotional videos, product demos, reels, or brand films, our team ensures every edit strengthens your message and keeps viewers engaged.\n\nWith attention to detail and a focus on storytelling, our post-production process enhances your brand identity while maintaining a fast turnaround. We optimize videos for platforms like Instagram, YouTube, and LinkedIn, helping you capture attention and drive action. Let's shape your stories into high-performing video content that converts.",
+      "image": "shoot.jpg",
+      "items": [
+        "Video Editing & Assembly",
+        "Color Grading & Visual Enhancements",
+        "Motion Graphics & Text Animations",
+        "Audio Mixing & Sound Design",
+        "Social Video Optimization",
+        "YouTube & Reels Formatting"
+      ],
+      "theme": "teal"
+    },
      {
       "id": "web",
       "label": "Web & Funnels",

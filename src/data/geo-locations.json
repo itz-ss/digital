@@ -1,0 +1,313 @@
+{
+  "baseCity": "Kanpur",
+  "baseState": "Uttar Pradesh",
+  "baseCountry": "India",
+  "tiers": {
+    "tier1": {
+      "label": "Kanpur & Nearby Areas",
+      "priority": "primary",
+      "locations": [
+        {
+          "slug": "kanpur",
+          "name": "Kanpur",
+          "type": "city",
+          "state": "Uttar Pradesh",
+          "pincode": "208001",
+          "latitude": 26.4499,
+          "longitude": 80.3319,
+          "landmarks": ["Green Park Stadium", "Kutchery", "Nana Rao Park"],
+          "description": "The oldest and largest business center in Uttar Pradesh, Kanpur is our primary service area.",
+          "vicinity": ["Kakadeo", "Shayam Nagar", "Swaroop Nagar", "Kidwai Nagar", "Civil Lines"]
+        },
+        {
+          "slug": "jajmau-kanpur",
+          "name": "Jajmau",
+          "type": "area",
+          "city": "Kanpur",
+          "state": "Uttar Pradesh",
+          "pincode": "208010",
+          "latitude": 26.3899,
+          "longitude": 80.2119,
+          "landmarks": ["Jajmau Industrial Area"],
+          "description": "Industrial hub and manufacturing center near Kanpur, growing business district."
+        },
+        {
+          "slug": "virat-nagar-kanpur",
+          "name": "Virat Nagar",
+          "type": "area",
+          "city": "Kanpur",
+          "state": "Uttar Pradesh",
+          "pincode": "208024",
+          "latitude": 26.5199,
+          "longitude": 80.3119,
+          "landmarks": ["Railway Station Area"],
+          "description": "Rapidly developing residential and commercial area in Kanpur."
+        },
+        {
+          "slug": "bithoor-kanpur",
+          "name": "Bithoor",
+          "type": "area",
+          "city": "Kanpur",
+          "state": "Uttar Pradesh",
+          "pincode": "209431",
+          "latitude": 26.8299,
+          "longitude": 80.2019,
+          "landmarks": ["Bithoor Temple"],
+          "description": "Historic area with growing commercial development north of Kanpur."
+        },
+        {
+          "slug": "fatehpur-kanpur",
+          "name": "Fatehpur",
+          "type": "area",
+          "city": "Kanpur",
+          "state": "Uttar Pradesh",
+          "pincode": "209171",
+          "latitude": 26.5699,
+          "longitude": 80.0519,
+          "landmarks": ["Fatehpur Township"],
+          "description": "Emerging business and residential hub in the Kanpur region."
+        }
+      ]
+    },
+    "tier2": {
+      "label": "Uttar Pradesh",
+      "priority": "secondary",
+      "locations": [
+        {
+          "slug": "lucknow-up",
+          "name": "Lucknow",
+          "type": "city",
+          "state": "Uttar Pradesh",
+          "pincode": "226001",
+          "latitude": 26.8467,
+          "longitude": 80.9462,
+          "landmarks": ["Hazratganj", "Gomti Nagar", "Charbagh"],
+          "description": "Capital of Uttar Pradesh, major business hub in North India.",
+          "distance": "60 km from Kanpur"
+        },
+        {
+          "slug": "agra-up",
+          "name": "Agra",
+          "type": "city",
+          "state": "Uttar Pradesh",
+          "pincode": "282001",
+          "latitude": 27.1767,
+          "longitude": 78.0081,
+          "landmarks": ["Taj Mahal", "Sadar Bazaar"],
+          "description": "Tourism and commerce capital of UP with growing digital presence.",
+          "distance": "240 km from Kanpur"
+        },
+        {
+          "slug": "varanasi-up",
+          "name": "Varanasi",
+          "type": "city",
+          "state": "Uttar Pradesh",
+          "pincode": "221001",
+          "latitude": 25.3209,
+          "longitude": 83.0105,
+          "landmarks": ["Kashi Vishwanath", "Dashashwamedh Ghat"],
+          "description": "Spiritual and cultural hub with emerging business opportunities.",
+          "distance": "380 km from Kanpur"
+        },
+        {
+          "slug": "meerut-up",
+          "name": "Meerut",
+          "type": "city",
+          "state": "Uttar Pradesh",
+          "pincode": "250001",
+          "latitude": 28.9845,
+          "longitude": 77.7064,
+          "landmarks": ["Delhi-Meerut Road"],
+          "description": "Manufacturing and industrial center near Delhi NCR.",
+          "distance": "420 km from Kanpur"
+        },
+        {
+          "slug": "allahabad-up",
+          "name": "Allahabad",
+          "type": "city",
+          "state": "Uttar Pradesh",
+          "pincode": "211001",
+          "latitude": 25.4358,
+          "longitude": 81.8463,
+          "landmarks": ["Triveni Sangam"],
+          "description": "Important cultural and administrative center in East UP.",
+          "distance": "200 km from Kanpur"
+        }
+      ]
+    },
+    "tier3": {
+      "label": "Major Cities - India",
+      "priority": "tertiary",
+      "locations": [
+        {
+          "slug": "delhi-ncr",
+          "name": "Delhi NCR",
+          "type": "region",
+          "state": "Delhi",
+          "pincode": "110001",
+          "latitude": 28.6139,
+          "longitude": 77.2090,
+          "landmarks": ["Cyber City", "Connaught Place", "Gurgaon", "Noida"],
+          "description": "National capital region and primary business hub of India.",
+          "distance": "440 km from Kanpur"
+        },
+        {
+          "slug": "mumbai-maharashtra",
+          "name": "Mumbai",
+          "type": "city",
+          "state": "Maharashtra",
+          "pincode": "400001",
+          "latitude": 19.0760,
+          "longitude": 72.8777,
+          "landmarks": ["BKC", "Nariman Point", "Worli"],
+          "description": "Financial capital of India with largest concentration of businesses.",
+          "distance": "1200 km from Kanpur"
+        },
+        {
+          "slug": "bangalore-karnataka",
+          "name": "Bangalore",
+          "type": "city",
+          "state": "Karnataka",
+          "pincode": "560001",
+          "latitude": 12.9716,
+          "longitude": 77.5946,
+          "landmarks": ["Electronic City", "Koramangala", "Whitefield"],
+          "description": "Silicon Valley of India, tech startup hub.",
+          "distance": "1700 km from Kanpur"
+        },
+        {
+          "slug": "hyderabad-telangana",
+          "name": "Hyderabad",
+          "type": "city",
+          "state": "Telangana",
+          "pincode": "500001",
+          "latitude": 17.3850,
+          "longitude": 78.4867,
+          "landmarks": ["HITEC City", "Gachibowli"],
+          "description": "Global tech hub and IT services capital.",
+          "distance": "1900 km from Kanpur"
+        },
+        {
+          "slug": "pune-maharashtra",
+          "name": "Pune",
+          "type": "city",
+          "state": "Maharashtra",
+          "pincode": "411001",
+          "latitude": 18.5204,
+          "longitude": 73.8567,
+          "landmarks": ["Hinjewadi IT Park", "Baner"],
+          "description": "Automotive and IT hub with young workforce.",
+          "distance": "1050 km from Kanpur"
+        },
+        {
+          "slug": "ahmedabad-gujarat",
+          "name": "Ahmedabad",
+          "type": "city",
+          "state": "Gujarat",
+          "pincode": "380001",
+          "latitude": 23.0225,
+          "longitude": 72.5714,
+          "landmarks": ["GIFT City", "Mahatma Mandir"],
+          "description": "Commercial heart of Gujarat, business and finance center.",
+          "distance": "880 km from Kanpur"
+        },
+        {
+          "slug": "kolkata-westbengal",
+          "name": "Kolkata",
+          "type": "city",
+          "state": "West Bengal",
+          "pincode": "700001",
+          "latitude": 22.5726,
+          "longitude": 88.3639,
+          "landmarks": ["Salt Lake IT Hub"],
+          "description": "Cultural and commercial hub of Eastern India.",
+          "distance": "1160 km from Kanpur"
+        },
+        {
+          "slug": "jaipur-rajasthan",
+          "name": "Jaipur",
+          "type": "city",
+          "state": "Rajasthan",
+          "pincode": "302001",
+          "latitude": 26.9124,
+          "longitude": 75.7873,
+          "landmarks": ["Hi-Tech City"],
+          "description": "Pink City and emerging tech hub of North India.",
+          "distance": "480 km from Kanpur"
+        },
+        {
+          "slug": "chandigarh-punjab",
+          "name": "Chandigarh",
+          "type": "city",
+          "state": "Chandigarh",
+          "pincode": "160001",
+          "latitude": 30.7333,
+          "longitude": 76.7794,
+          "landmarks": ["IT Park"],
+          "description": "Union territory with high business presence.",
+          "distance": "570 km from Kanpur"
+        },
+        {
+          "slug": "kochi-kerala",
+          "name": "Kochi",
+          "type": "city",
+          "state": "Kerala",
+          "pincode": "682001",
+          "latitude": 9.9312,
+          "longitude": 76.2673,
+          "landmarks": ["Kochi Special Economic Zone"],
+          "description": "Major IT and startup hub in South India.",
+          "distance": "2700 km from Kanpur"
+        }
+      ]
+    },
+    "tier4": {
+      "label": "International Markets",
+      "priority": "global",
+      "regions": [
+        {
+          "slug": "south-asia",
+          "name": "South Asia",
+          "countries": ["Bangladesh", "Sri Lanka", "Nepal", "Pakistan"],
+          "description": "Geographic and cultural proximity region"
+        },
+        {
+          "slug": "southeast-asia",
+          "name": "Southeast Asia",
+          "countries": ["Singapore", "Malaysia", "Thailand", "Vietnam", "Indonesia", "Philippines"],
+          "description": "High growth emerging markets"
+        },
+        {
+          "slug": "middle-east",
+          "name": "Middle East & GCC",
+          "countries": ["UAE", "Saudi Arabia", "Qatar", "Bahrain", "Oman", "Kuwait"],
+          "description": "High-value business markets with Indian diaspora"
+        },
+        {
+          "slug": "north-america",
+          "name": "North America",
+          "countries": ["USA", "Canada"],
+          "description": "Primary English-speaking developed market"
+        },
+        {
+          "slug": "europe",
+          "name": "Europe",
+          "countries": ["UK", "Germany", "France", "Netherlands", "Switzerland"],
+          "description": "Developed markets with focus on quality"
+        },
+        {
+          "slug": "australia",
+          "name": "Oceania",
+          "countries": ["Australia", "New Zealand"],
+          "description": "English-speaking developed markets"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2024-01-15",
+    "coverage": "Kanpur-centric with India-wide and international expansion support",
+    "supportedLanguages": ["English"],
+    "primaryLanguage": "en-IN"
+  }
+}

@@ -13,6 +13,94 @@
   gap: 12px;
 }
 
+.theme-contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.contact-action-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--primary-accent-rgb), 0.18);
+  background: rgba(var(--bg-primary-rgb), 0.86);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-action-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 20% 20%, rgba(var(--primary-accent-rgb), 0.18), transparent 40%);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-action-btn:hover {
+  transform: translateY(-2px) scale(1.01);
+  background: rgba(var(--bg-primary-rgb), 0.96);
+  border-color: rgba(var(--primary-accent-rgb), 0.32);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(var(--primary-accent-rgb), 0.08);
+}
+
+.contact-action-btn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  color: #fff;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-action-btn:hover .contact-action-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.18);
+}
+
+.contact-action-icon img,
+.contact-action-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.contact-action-btn.whatsapp .contact-action-icon {
+  background: #25d366;
+}
+
+.contact-action-btn.phone .contact-action-icon {
+  background: var(--primary-accent);
+}
+
 /* ================================
    TOGGLE BUTTON (Floating Orb)
 ================================ */

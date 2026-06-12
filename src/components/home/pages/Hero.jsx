@@ -68,7 +68,7 @@ export default function Hero() {
                   {hero.subheadline}
                 </p>
                 <div className="tech-readout">
-                  <span className="text-mono">LAT: 40.7128° N // LNG: 74.0060° W</span>
+                  <span className="text-mono">LAT: 26.4268° N // LNG: 80.3867° E</span>
                   <div className="tech-line"></div>
                 </div>
               </div>

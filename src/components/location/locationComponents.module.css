@@ -1,0 +1,516 @@
+/* Reusable Location Components Styles */
+
+/* ============================================
+   Wrapper & Layout
+   ============================================ */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   Card Component
+   ============================================ */
+
+.card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.cardState {
+  color: #667eea;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.cardDistance {
+  color: #999;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.7rem;
+}
+
+.landmarks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.landmark {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #667eea;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* ============================================
+   Grid Component
+   ============================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ============================================
+   Tier Section
+   ============================================ */
+
+.tierSection {
+  background: white;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+}
+
+.tierHeader {
+  margin-bottom: 2rem;
+}
+
+.tierTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.tierSubtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ============================================
+   Services Section
+   ============================================ */
+
+.services {
+  background: white;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.services p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.serviceItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.serviceIcon {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.serviceContent h3 {
+  color: #333;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   FAQ Section
+   ============================================ */
+
+.faq {
+  background: white;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  background: #f8f9fa;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border-left: 4px solid #667eea;
+}
+
+.faqQuestion {
+  padding: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  user-select: none;
+  display: block;
+}
+
+.faqItem:hover .faqQuestion {
+  background: #f0f1f5;
+}
+
+.faqAnswer {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* ============================================
+   Vicinity Areas
+   ============================================ */
+
+.vicinity {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.vicinity h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.vicinity > .wrapper > p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.areasList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.areaTag {
+  background: white;
+  color: #667eea;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 2px solid #667eea;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.areaTag:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* ============================================
+   Why Choose Section
+   ============================================ */
+
+.whyChoose {
+  background: white;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.whyChoose h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border-top: 4px solid #28a745;
+}
+
+.benefit h3 {
+  color: #28a745;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.benefit p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 3rem 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* ============================================
+   Breadcrumbs
+   ============================================ */
+
+.breadcrumbs {
+  background: #f8f9fa;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  color: #999;
+  margin: 0 0.5rem;
+}
+
+/* ============================================
+   Stats Section
+   ============================================ */
+
+.stats {
+  background: #f8f9fa;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.statItem {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.statLabel {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  color: #667eea;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper {
+    padding: 1.5rem;
+  }
+
+  .benefitsGrid,
+  .servicesList {
+    grid-template-columns: 1fr;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .areasList {
+    gap: 0.5rem;
+  }
+
+  .areaTag {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .arrow {
+    order: -1;
+  }
+
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

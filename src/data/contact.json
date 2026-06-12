@@ -9,25 +9,20 @@
     },
     "phone": {
       "label": "Phone",
-      "value": "+91 7348192459",
-      "href": "tel:+917348192459"
+      "value": "+91 6388060502",
+      "href": "tel:+916388060502"
     },
     "whatsapp": {
       "label": "WhatsApp",
-      "value": "+91 9454552549",
-      "href": "https://wa.me/919454552549"
+      "value": "+91 6388060502",
+      "href": "https://wa.me/916388060502"
     }
   },
   "socialLinks": [
     {
       "platform": "Instagram",
-      "url": "https://instagram.com/digitalgram",
+      "url": "https://www.instagram.com/thedigitalgram.in?igsh=ZXFyMHVxYnJpcGow",
       "icon": "instagram"
-    },
-    {
-      "platform": "LinkedIn",
-      "url": "https://linkedin.com/company/digitalgram",
-      "icon": "linkedin"
     },
     {
       "platform": "YouTube",
